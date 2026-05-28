@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth overflow-x-hidden" lang="pt-br">
+<html class="overflow-x-hidden" lang="pt-br">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -343,7 +343,7 @@
         </section>
 
         <!-- Section 2: Details and Takeaways -->
-        <section id="sobre-o-livro" class="relative py-24 md:py-32 overflow-hidden border-t border-white/5 bg-[#0b162d]/40">
+        <section id="sobre-o-livro" class="relative py-24 md:py-32 overflow-hidden bg-transparent" style="background: radial-gradient(circle at 50% 50%, rgba(46, 134, 232, 0.04) 0%, rgba(14, 35, 71, 0) 75%);">
             <!-- Background lights for section 2 -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse-slow"></div>
             
@@ -362,40 +362,54 @@
                 <!-- Split Content Layout -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-24">
                     <!-- Left Copy (First half of main text) -->
-                    <div class="lg:col-span-5 text-left lg:text-right">
-                        <p class="sec2-reveal-left text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide opacity-0 -translate-x-8">
-                            Homologação de Sentença Estrangeira no Brasil reúne, em uma única obra, os fundamentos constitucionais, os requisitos processuais e a jurisprudência consolidada do Superior Tribunal de Justiça. A autora percorre desde a base teórica — soberania, jurisdição e cooperação internacional...
-                        </p>
+                    <div class="lg:col-span-5 text-left sec2-reveal-left opacity-0 -translate-x-8">
+                        <div class="glass-panel rounded-2xl p-6 md:p-8 hover:border-brand-gold/20 transition-all duration-300">
+                            <h4 class="text-brand-gold font-serif text-lg font-medium mb-3">Fundamentos</h4>
+                            <p class="text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide">
+                                Reúne em uma única obra os fundamentos constitucionais, os requisitos processuais e a jurisprudência consolidada do Superior Tribunal de Justiça sobre o tema.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Center Globe Element -->
                     <div class="lg:col-span-2 flex justify-center py-6 lg:py-0">
-                        <div class="sec2-reveal-center relative w-32 h-32 flex items-center justify-center opacity-0 scale-75">
+                        <div class="sec2-reveal-center relative w-24 h-24 flex items-center justify-center opacity-0 scale-75">
                             <!-- Soft background glow -->
                             <div class="absolute inset-0 bg-brand-gold/10 blur-[20px] rounded-full pointer-events-none -z-10 animate-pulse-slow"></div>
                             
-                            <!-- Animated SVG Globe -->
-                            <svg class="w-20 h-20 text-brand-gold select-none pointer-events-none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle class="animate-[spin_24s_linear_infinite]" cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="4 4" />
-                                <circle class="animate-[spin_18s_linear_infinite_reverse]" cx="50" cy="50" r="38" fill="none" stroke="rgba(111,168,245,0.3)" stroke-width="0.5" stroke-dasharray="15 5 5 5" />
+                            <!-- Animated Clean SVG Globe -->
+                            <svg class="w-16 h-16 text-brand-gold select-none pointer-events-none animate-[spin_32s_linear_infinite]" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Outer border circle (very thin, low opacity) -->
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(212, 180, 122, 0.15)" stroke-width="0.75" />
+                                
+                                <!-- Main Globe circle -->
                                 <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="1.25" />
+                                
+                                <!-- Latitudes -->
                                 <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="0.75" />
-                                <path d="M24 35 Q50 42 76 35" fill="none" stroke="rgba(244,246,250,0.15)" stroke-width="0.75" />
-                                <path d="M24 65 Q50 58 76 65" fill="none" stroke="rgba(244,246,250,0.15)" stroke-width="0.75" />
-                                <ellipse cx="50" cy="50" rx="18" ry="30" fill="none" stroke="currentColor" stroke-width="0.75" />
-                                <ellipse cx="50" cy="50" rx="8" ry="30" fill="none" stroke="rgba(111,168,245,0.4)" stroke-width="0.5" />
+                                <path d="M24 35 Q50 42 76 35" fill="none" stroke="rgba(244, 246, 250, 0.2)" stroke-width="0.75" />
+                                <path d="M24 65 Q50 58 76 65" fill="none" stroke="rgba(244, 246, 250, 0.2)" stroke-width="0.75" />
+                                
+                                <!-- Longitude Ellipse -->
+                                <ellipse cx="50" cy="50" rx="15" ry="30" fill="none" stroke="currentColor" stroke-width="0.75" />
+                                
+                                <!-- Prime Meridian -->
                                 <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="0.75" />
-                                <circle class="animate-ping" cx="50" cy="50" r="4" fill="#6FA8F5" style="animation-duration: 3s;" />
+                                
+                                <!-- Small central node -->
                                 <circle cx="50" cy="50" r="2.5" fill="#D4B47A" />
                             </svg>
                         </div>
                     </div>
 
                     <!-- Right Copy (Second half of main text) -->
-                    <div class="lg:col-span-5 text-left">
-                        <p class="sec2-reveal-right text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide opacity-0 translate-x-8">
-                            ...até as questões mais delicadas da prática: divórcios obtidos no exterior, decisões arbitrais, partilhas de bens em múltiplos países, guarda de filhos, adoções internacionais e contratos transnacionais. Mais do que um manual, a obra entrega um método de raciocínio para enfrentar casos reais com segurança técnica e estratégica.
-                        </p>
+                    <div class="lg:col-span-5 text-left sec2-reveal-right opacity-0 translate-x-8">
+                        <div class="glass-panel rounded-2xl p-6 md:p-8 hover:border-brand-gold/20 transition-all duration-300">
+                            <h4 class="text-brand-gold font-serif text-lg font-medium mb-3">Aplicação prática</h4>
+                            <p class="text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide">
+                                Avança da base teórica — soberania, jurisdição e cooperação internacional — até os casos mais sensíveis: divórcios, sucessões, arbitragens e contratos transnacionais.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -487,22 +501,27 @@
 
             // 2. Initialize Lenis Smooth Scroll
             const lenis = new Lenis({
-                duration: 1.2,
+                duration: 1.1,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 direction: 'vertical',
                 gestureDirection: 'vertical',
                 smooth: true,
                 mouseMultiplier: 1,
                 smoothTouch: false,
-                touchMultiplier: 2,
+                touchMultiplier: 1.5,
                 infinite: false,
             });
 
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
+            // Update ScrollTrigger on Lenis scroll
+            lenis.on('scroll', () => {
+                if (window.ScrollTrigger) ScrollTrigger.update();
+            });
+
+            // Sync with GSAP ticker
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
 
             // 3. Custom trailing cursor (desktop pointer movements only)
             const cursorDot = document.querySelector('.custom-cursor-dot');
