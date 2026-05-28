@@ -494,6 +494,51 @@
 
             </div>
         </section>
+
+        <!-- Section 3: Call to Action / Comprar -->
+        <section id="comprar" class="w-full bg-[#0055FF] relative overflow-visible z-20">
+            <!-- Vertical padding applied directly to the container to align absolute bottom flush -->
+            <div class="container mx-auto px-6 max-w-6xl relative z-10 py-16 lg:py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Side: Copy and Action -->
+                    <div class="order-1 lg:order-1 lg:col-span-7 text-left space-y-6 relative z-10 sec3-reveal-left opacity-0 -translate-x-8">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans font-bold text-white leading-snug tracking-normal max-w-xl">
+                            Seja o profissional que domina a homologação de sentenças estrangeiras — a referência técnica que faltava no seu acervo jurídico.
+                        </h2>
+                        
+                        <div class="flex flex-col gap-5 items-start pt-2">
+                            <!-- CTA Button (white with blue text) -->
+                            <a class="bg-white text-[#0055FF] hover:bg-[#0E2347] hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.15)] hover:scale-[1.03] active:scale-95 inline-block" href="https://www.jurua.com.br/shop_item.asp?id=30231" target="_blank">
+                                QUERO MEU EXEMPLAR
+                            </a>
+                            
+                            <!-- Badges (Checks) -->
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-[10px] uppercase tracking-wider text-white/80 font-bold font-sans pt-1">
+                                <span class="flex items-center gap-2">
+                                    <span class="text-white text-xs">✓</span> Entrega para todo o Brasil
+                                </span>
+                                <span class="flex items-center gap-2">
+                                    <span class="text-white text-xs">✓</span> Edição Juruá Editora
+                                </span>
+                                <span class="flex items-center gap-2">
+                                    <span class="text-white text-xs">✓</span> Jurisprudência atualizada
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side: Bleeding/Overflowing Mockup -->
+                    <div class="order-2 lg:order-2 lg:col-span-5 relative flex justify-center lg:justify-end">
+                        <!-- Desktop Absolute container flush at bottom (bottom: 0) and height specified to bleed top, Mobile Relative with -mb-16 to sit flush -->
+                        <div class="relative lg:absolute lg:bottom-0 lg:right-6 w-[95%] sm:w-[80%] md:w-[65%] lg:w-[480px] xl:w-[560px] h-[300px] sm:h-[350px] md:h-[400px] lg:h-[480px] xl:h-[550px] z-30 sec3-reveal-right opacity-0 translate-x-8 -mb-16 lg:mb-0">
+                            <img src="assets/book-vazando.webp" alt="Livro Homologação de Sentença Estrangeira no Brasil em perspectiva" class="w-full h-full object-contain object-bottom filter drop-shadow-[-25px_25px_35px_rgba(0,0,0,0.6)] hover:scale-[1.02] transition-transform duration-500">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Scripts initialization -->
@@ -751,9 +796,32 @@
                     stagger: 0.12,
                     ease: 'power3.out'
                 });
+
+                // Section 3: Call to Action trigger
+                gsap.to('.sec3-reveal-left', {
+                    scrollTrigger: {
+                        trigger: '#comprar',
+                        start: 'top 80%',
+                    },
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.0,
+                    ease: 'power3.out'
+                });
+
+                gsap.to('.sec3-reveal-right', {
+                    scrollTrigger: {
+                        trigger: '#comprar',
+                        start: 'top 80%',
+                    },
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.2,
+                    ease: 'power3.out'
+                });
             } else {
-                // Instantly set Section 2 values
-                gsap.set('.sec2-reveal, .sec2-reveal-left, .sec2-reveal-center, .sec2-reveal-right, .sec2-card', {
+                // Instantly set Section 2 and 3 values
+                gsap.set('.sec2-reveal, .sec2-reveal-left, .sec2-reveal-center, .sec2-reveal-right, .sec2-card, .sec3-reveal-left, .sec3-reveal-right', {
                     opacity: 1,
                     y: 0,
                     x: 0,
