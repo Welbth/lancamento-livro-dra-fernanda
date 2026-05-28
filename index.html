@@ -948,6 +948,17 @@
             });
             gsap.ticker.lagSmoothing(0);
 
+            // Recalculate layout dimensions on load and image load to prevent Lenis scroll cutoff bugs
+            const refreshScroll = () => {
+                if (window.ScrollTrigger) ScrollTrigger.refresh();
+                lenis.resize();
+            };
+            window.addEventListener('load', refreshScroll);
+            document.querySelectorAll('img').forEach(img => {
+                if (img.complete) return;
+                img.addEventListener('load', refreshScroll);
+            });
+
             // 3. Custom trailing cursor (desktop pointer movements only)
             const cursorDot = document.querySelector('.custom-cursor-dot');
             const cursorRing = document.querySelector('.custom-cursor-ring');
@@ -1112,128 +1123,106 @@
                 // Register ScrollTrigger
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Section 2 Header trigger
-                gsap.to('.sec2-reveal', {
+                // Section 2 Header & Columns Timeline (Consolidated trigger)
+                const sec2Tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: '#sobre-o-livro',
-                        start: 'top 80%',
-                    },
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.0,
-                    stagger: 0.15,
-                    ease: 'power3.out'
+                        start: 'top 75%',
+                        once: true
+                    }
                 });
 
-                // Split Left text trigger
-                gsap.to('.sec2-reveal-left', {
-                    scrollTrigger: {
-                        trigger: '#sobre-o-livro',
-                        start: 'top 70%',
-                    },
-                    opacity: 1,
-                    x: 0,
-                    duration: 1.0,
-                    ease: 'power3.out'
-                });
-
-                // Split Center globe trigger
-                gsap.to('.sec2-reveal-center', {
-                    scrollTrigger: {
-                        trigger: '#sobre-o-livro',
-                        start: 'top 70%',
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: 1.2,
-                    ease: 'back.out(1.5)'
-                });
-
-                // Split Right text trigger
-                gsap.to('.sec2-reveal-right', {
-                    scrollTrigger: {
-                        trigger: '#sobre-o-livro',
-                        start: 'top 70%',
-                    },
-                    opacity: 1,
-                    x: 0,
-                    duration: 1.0,
-                    ease: 'power3.out'
-                });
+                sec2Tl.fromTo('.sec2-reveal', 
+                    { opacity: 0, y: 24 },
+                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
+                )
+                .fromTo('.sec2-reveal-left',
+                    { opacity: 0, x: -32 },
+                    { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' },
+                    '-=0.4'
+                )
+                .fromTo('.sec2-reveal-center',
+                    { opacity: 0, scale: 0.75 },
+                    { opacity: 1, scale: 1, duration: 1.0, ease: 'back.out(1.5)' },
+                    '-=0.6'
+                )
+                .fromTo('.sec2-reveal-right',
+                    { opacity: 0, x: 32 },
+                    { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out' },
+                    '-=0.8'
+                );
 
                 // Bento cards trigger
-                gsap.to('.sec2-card', {
-                    scrollTrigger: {
-                        trigger: '.sec2-card-container',
-                        start: 'top 85%',
-                    },
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.8,
-                    stagger: 0.12,
-                    ease: 'power3.out'
-                });
+                gsap.fromTo('.sec2-card', 
+                    { opacity: 0, y: 24 },
+                    {
+                        scrollTrigger: {
+                            trigger: '.sec2-card-container',
+                            start: 'top 80%',
+                            once: true
+                        },
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        stagger: 0.12,
+                        ease: 'power3.out'
+                    }
+                );
 
-                // Section 3 reveals
-                gsap.to('.sec3-reveal', {
-                    scrollTrigger: {
-                        trigger: '#detalhes',
-                        start: 'top 80%',
-                    },
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.0,
-                    stagger: 0.15,
-                    ease: 'power3.out'
-                });
-
-                gsap.to('.sec3-image-reveal', {
+                // Section 3 reveals Timeline (Consolidated trigger)
+                const sec3Tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: '#detalhes',
                         start: 'top 75%',
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: 1.2,
-                    ease: 'power3.out'
+                        once: true
+                    }
                 });
 
-                // Section 4 reveals
-                gsap.to('.sec4-reveal', {
-                    scrollTrigger: {
-                        trigger: '#sobre-a-autora',
-                        start: 'top 80%',
-                    },
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.0,
-                    stagger: 0.15,
-                    ease: 'power3.out'
-                });
+                sec3Tl.fromTo('.sec3-image-reveal',
+                    { opacity: 0, scale: 0.95 },
+                    { opacity: 1, scale: 1, duration: 1.0, ease: 'power3.out' }
+                )
+                .fromTo('.sec3-reveal',
+                    { opacity: 0, y: 24 },
+                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' },
+                    '-=0.6'
+                );
 
-                gsap.to('.sec4-image-reveal', {
+                // Section 4 reveals Timeline (Consolidated trigger)
+                const sec4Tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: '#sobre-a-autora',
                         start: 'top 75%',
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: 1.2,
-                    ease: 'power3.out'
+                        once: true
+                    }
                 });
+
+                sec4Tl.fromTo('.sec4-image-reveal',
+                    { opacity: 0, scale: 0.95 },
+                    { opacity: 1, scale: 1, duration: 1.0, ease: 'power3.out' }
+                )
+                .fromTo('.sec4-reveal',
+                    { opacity: 0, y: 24 },
+                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' },
+                    '-=0.6'
+                );
 
                 // Section 5 reveals
-                gsap.to('.sec5-reveal', {
-                    scrollTrigger: {
-                        trigger: '#comprar',
-                        start: 'top 80%',
-                    },
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.0,
-                    stagger: 0.15,
-                    ease: 'power3.out'
-                });
+                gsap.fromTo('.sec5-reveal', 
+                    { opacity: 0, y: 24 },
+                    {
+                        scrollTrigger: {
+                            trigger: '#comprar',
+                            start: 'top 80%',
+                            once: true
+                        },
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.0,
+                        stagger: 0.15,
+                        ease: 'power3.out'
+                    }
+                );
             } else {
                 // Instantly set Section 2, Section 3, Section 4 and Section 5 values
                 gsap.set('.sec2-reveal, .sec2-reveal-left, .sec2-reveal-center, .sec2-reveal-right, .sec2-card, .sec3-reveal, .sec3-image-reveal, .sec4-reveal, .sec4-image-reveal, .sec5-reveal', {
@@ -1274,9 +1263,10 @@
                         }
                     }
                     
-                    // Refresh GSAP ScrollTrigger to recalculate layout dimensions
+                    // Refresh GSAP ScrollTrigger and Lenis to recalculate layout dimensions
                     setTimeout(() => {
                         if (window.ScrollTrigger) ScrollTrigger.refresh();
+                        lenis.resize();
                     }, 300);
                 });
             });
