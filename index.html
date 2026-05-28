@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html class="scroll-smooth overflow-x-hidden" lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Homologação de Sentença Estrangeira no Brasil | Dra. Fernanda Nelsen Teodoro Decesaro</title>
+    <meta content="Adquira a obra definitiva de Fernanda Nelsen Teodoro Decesaro sobre o reconhecimento de decisões estrangeiras no ordenamento jurídico brasileiro. Publicado pela Juruá Editora." name="description"/>
+    
+    <!-- Fonts: Plus Jakarta Sans, Playfair Display & IBM Plex Mono from local luxury-law-firm-11 assets -->
+    <link href="assets/luxury-law-firm-11.aura.build/assets/d12728c695d9fa3b_css2.css" rel="stylesheet"/>
+    <link href="assets/luxury-law-firm-11.aura.build/assets/04e082577ae710a5_css2.css" rel="stylesheet"/>
+    
+    <!-- Webflow Stylesheet from karasbook.webflow.io assets -->
+    <link href="assets/karasbook.webflow.io/assets/735df6cba923ddde_karasbook.webflow.43ad82704.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- Tailwind CSS (Tailwind 3.4.17) from luxury-law-firm-11 assets -->
+    <script src="assets/luxury-law-firm-11.aura.build/assets/176e894661aa9cdc_3.4.17"></script>
+    
+    <!-- Lucide Icons UMD from luxury-law-firm-11 assets -->
+    <script src="assets/luxury-law-firm-11.aura.build/assets/187a756625c5ce74_lucide.min.js"></script>
+
+    <!-- External Premium Libraries via CDN -->
+    <!-- GSAP 3 (Core) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- SplitType for editorial typography reveal -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- Lenis for ultra-smooth scrolling experience -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['IBM Plex Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#D4B47A', // Highlight Gold
+                            goldglow: '#E3CFA8', // Lighter gold
+                            dark: '#0E2347', // Deep Navy Background
+                            panel: '#1A3566', // Mid Blue Panel
+                            border: 'rgba(244, 246, 250, 0.08)', // Ice white border
+                            purple: '#2E86E8', // Accent Blue
+                            pink: '#6FA8F5', // Accent Light Blue
+                            blue: '#1A3566',
+                            light: '#F4F6FA' // Ice White Text/Light
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                          '0%, 100%': { transform: 'translateY(0)' },
+                          '50%': { transform: 'translateY(-12px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS resets and custom updates */
+        body {
+            background: radial-gradient(circle at 10% 10%, #152E5B 0%, #0E2347 55%, #07152d 100%);
+            color: #F4F6FA;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-top: 0 !important;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* --- Custom Noise Overlay --- */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* --- Scroll Entrance Reveals --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: blur(6px);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* --- Premium Glassmorphism --- */
+        .glass-panel {
+            background: linear-gradient(180deg, rgba(212, 180, 122, 0.03) 0%, rgba(244, 246, 250, 0.01) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(244, 246, 250, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+        .glass-panel:hover {
+            border-color: rgba(212, 180, 122, 0.2);
+            background: linear-gradient(180deg, rgba(212, 180, 122, 0.05) 0%, rgba(244, 246, 250, 0.02) 100%);
+        }
+
+
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0E2347; }
+        ::-webkit-scrollbar-thumb { background: #1A3566; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4B47A; }
+
+        /* --- Text Gradients --- */
+        .text-gradient {
+            background: linear-gradient(to bottom right, #F4F6FA, #D4B47A 70%, #E3CFA8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-purple {
+            background: linear-gradient(135deg, #F4F6FA, #6FA8F5 60%, #2E86E8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- 3D Floating Book Mockup --- */
+        .perspective-container {
+            perspective: 1200px;
+        }
+        .book-wrapper-3d {
+            transform: rotateY(-18deg) rotateX(8deg) rotateZ(-2deg);
+            transform-style: preserve-3d;
+            box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.6), 0 0 40px rgba(46, 134, 232, 0.1);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s;
+        }
+        
+        /* Floating Shadow Animation */
+        @keyframes float-shadow {
+            0%, 100% {
+                transform: translateX(-50%) scale(0.95);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateX(-50%) scale(0.85);
+                opacity: 0.3;
+                filter: blur(16px);
+            }
+        }
+        .animate-float-shadow {
+            animation: float-shadow 6s ease-in-out infinite;
+        }
+
+        /* --- Webflow Button Overrides to Blue Accent --- */
+        .main-cta {
+            background: linear-gradient(249deg, #2E86E8, #6FA8F5) !important;
+            border: none !important;
+            color: #F4F6FA !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+        }
+        .main-cta:hover {
+            background: linear-gradient(249deg, #1E65B8, #2E86E8) !important;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(46, 134, 232, 0.3) !important;
+        }
+
+        /* Custom trailing cursor classes */
+        .custom-cursor-dot, .custom-cursor-ring {
+            transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s, transform 0.05s ease-out;
+        }
+
+        /* Custom SplitType words styles for H1 reveal to prevent flashing */
+        .split-title .word {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: bottom;
+            opacity: 0;
+            transform: translateY(24px);
+        }
+
+        /* Respect accessibility reduced motion setting */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-delay: 0s !important;
+                animation-duration: 0s !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0s !important;
+                scroll-behavior: auto !important;
+            }
+            .animate-float {
+                animation: none !important;
+                transform: none !important;
+            }
+            .animate-float-shadow {
+                animation: none !important;
+                transform: translateX(-50%) scale(0.95) !important;
+                opacity: 0.4 !important;
+            }
+            .book-wrapper-3d {
+                transform: rotateY(-18deg) rotateX(8deg) rotateZ(-2deg) !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-brand-gold selection:text-brand-dark overflow-x-hidden">
+
+    <!-- Subtle Grain Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Fixed Structural Grids and Blur Blobs -->
+
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[320px] md:w-[900px] h-[500px] bg-brand-purple/15 rounded-full blur-[100px] md:blur-[140px] -z-10 animate-pulse-slow"></div>
+    <div class="fixed bottom-10 right-10 w-[450px] h-[450px] bg-brand-pink/5 rounded-full blur-[120px] -z-10"></div>
+    <div class="fixed top-1/3 left-10 w-[300px] h-[300px] bg-brand-gold/5 rounded-full blur-[100px] -z-10"></div>
+
+    <!-- Giant subtle typographic decoration in background -->
+    <div class="absolute top-[25%] left-[-5%] font-serif text-[12vw] font-bold text-white/[0.015] select-none pointer-events-none -z-10 leading-none">
+        JURUÁ
+    </div>
+    <div class="absolute top-[60%] right-[-5%] font-serif text-[10vw] font-bold text-brand-gold/[0.01] select-none pointer-events-none -z-10 leading-none">
+        SENTENÇA
+    </div>
+
+    <!-- Global Top Glass Navigation -->
+    <nav class="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-6xl z-50 transition-all duration-300 navbar-reveal opacity-0 -translate-y-4">
+        <div class="glass-panel rounded-full p-2 pl-5 pr-5 flex items-center justify-between shadow-2xl">
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-3.5 h-3.5 bg-brand-gold rounded-sm rotate-45 shadow-[0_0_12px_rgba(212,180,122,0.8)] animate-[spin_10s_linear_infinite]"></div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-serif tracking-widest text-white leading-none">DRA. FERNANDA</span>
+                    <span class="text-[8px] uppercase tracking-[0.25em] text-brand-pink leading-none mt-0.5 font-bold">Lançamento Editorial</span>
+                </div>
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#sobre-o-livro">A Obra</a>
+                <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#detalhes">Conteúdo</a>
+                <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#sobre-a-autora">Autora</a>
+            </div>
+            <!-- Action Button -->
+            <div>
+                <a class="bg-white text-brand-dark px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] inline-block active:scale-95" href="#comprar">
+                    Comprar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Custom Trailing Luxury Cursor (Desktop only) -->
+    <div class="custom-cursor-dot fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-brand-gold pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden lg:block"></div>
+    <div class="custom-cursor-ring fixed top-0 left-0 w-9 h-9 rounded-full border border-brand-pink/40 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden lg:block"></div>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center pt-32 pb-24 md:py-36 overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Left Column: Copywriting Narrative -->
+                    <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8 text-left">
+                        
+                        <!-- Eyebrow Tag -->
+                        <div class="hero-eyebrow opacity-0 -translate-y-4">
+                            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-brand-pink/20 bg-brand-purple/10 backdrop-blur-md">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-brand-pink"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-pink"></span>
+                                </span>
+                                <span class="text-[9px] font-bold text-brand-pink tracking-[0.2em] uppercase">LANÇAMENTO OFICIAL · JURUÁ EDITORA</span>
+                            </div>
+                        </div>
+
+                        <!-- H1 Title -->
+                        <h1 class="split-title text-4xl sm:text-5xl md:text-6xl font-serif text-white tracking-wide leading-[1.25] font-light">
+                            Homologação de Sentença Estrangeira no Brasil
+                        </h1>
+
+                        <!-- Gold Divider Line -->
+                        <div class="hero-divider h-[1px] w-48 bg-gradient-to-r from-brand-gold/60 via-brand-pink/20 to-transparent opacity-0 -translate-x-4"></div>
+
+                        <!-- Subtitle -->
+                        <p class="hero-subtitle text-sm md:text-base font-sans font-light text-brand-light/90 max-w-xl leading-relaxed tracking-wide opacity-0 translate-y-4">
+                            A obra de Fernanda Nelsen Teodoro Decesaro que sistematiza, em um único volume, tudo o que o profissional do direito precisa saber sobre o reconhecimento de decisões estrangeiras no ordenamento jurídico brasileiro.
+                        </p>
+
+                        <!-- Description -->
+                        <p class="hero-description text-xs md:text-sm font-sans font-light text-brand-light/60 max-w-lg leading-relaxed tracking-wide opacity-0 translate-y-4">
+                            Da fundamentação constitucional aos casos mais sensíveis da prática — divórcios, sucessões, contratos e arbitragens internacionais. Um livro escrito para quem não pode errar.
+                        </p>
+
+                        <!-- Call To Action (CTA) Button -->
+                        <div class="hero-cta pt-2 opacity-0 translate-y-4">
+                            <a class="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1px] focus:outline-none hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-[0_4px_25px_rgba(212,180,122,0.15)] hover:shadow-[0_8px_30px_rgba(212,180,122,0.3)]" href="#comprar">
+                                <span class="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0E2347_0%,#D4B47A_50%,#0E2347_100%)]"></span>
+                                <span class="inline-flex h-full w-full cursor-pointer items-center justify-center gap-3 rounded-full bg-brand-panel px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-3xl transition-all group-hover:bg-[#0e182a] duration-300">
+                                    <span>Comprar agora</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4 text-brand-gold group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Mockup Showcase -->
+                    <div class="order-1 lg:order-2 lg:col-span-5 flex flex-col items-center justify-center relative">
+                        <!-- Soft background glow behind the book -->
+                        <div class="absolute inset-0 bg-brand-purple/15 blur-[90px] rounded-full pointer-events-none -z-10 animate-pulse-slow"></div>
+                        
+                        <!-- Book GSAP Entrance Wrapper (fixed size and flat styling, entry animation only) -->
+                        <div class="book-gsap-reveal opacity-0 filter blur-[20px] w-[90%] max-w-[340px] md:max-w-[420px] lg:w-full lg:max-w-[500px] xl:max-w-[540px] relative z-10">
+                            <img alt="Mockup do livro Homologação de Sentença Estrangeira no Brasil da advogada Fernanda Nelsen Teodoro Decesaro" 
+                                 class="w-full mx-auto select-none filter drop-shadow-[-15px_20px_25px_rgba(0,0,0,0.65)]" 
+                                 src="assets/book-mockup.webp"
+                                 fetchpriority="high"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Discrete bottom scroll indicator -->
+            <div class="scroll-indicator absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none select-none opacity-0 translate-y-2">
+                <span class="text-[8px] uppercase tracking-[0.25em] text-brand-light/35 font-bold font-sans">Conhecer a obra</span>
+                <div class="w-4 h-7 rounded-full border border-brand-light/15 flex justify-center p-1">
+                    <div class="w-1 h-1.5 bg-brand-gold rounded-full animate-bounce"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Details and Takeaways -->
+        <section id="sobre-o-livro" class="relative py-24 md:py-32 overflow-hidden border-t border-white/5 bg-[#0b162d]/40">
+            <!-- Background lights for section 2 -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse-slow"></div>
+            
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <div class="sec2-reveal flex justify-center mb-4 opacity-0 translate-y-4">
+                        <span class="text-[9px] font-bold text-brand-gold tracking-[0.25em] uppercase">CONTEÚDO EXCLUSIVO</span>
+                    </div>
+                    <h2 class="sec2-reveal text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.3] max-w-4xl mx-auto opacity-0 translate-y-4">
+                        A referência que faltava sobre o tema <span class="italic text-brand-gold">mais complexo</span> do direito internacional <span class="text-gradient">privado brasileiro</span>
+                    </h2>
+                    <div class="sec2-reveal h-[1px] w-24 bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent mx-auto mt-6 opacity-0 translate-y-4"></div>
+                </div>
+
+                <!-- Split Content Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-24">
+                    <!-- Left Copy (First half of main text) -->
+                    <div class="lg:col-span-5 text-left lg:text-right">
+                        <p class="sec2-reveal-left text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide opacity-0 -translate-x-8">
+                            Homologação de Sentença Estrangeira no Brasil reúne, em uma única obra, os fundamentos constitucionais, os requisitos processuais e a jurisprudência consolidada do Superior Tribunal de Justiça. A autora percorre desde a base teórica — soberania, jurisdição e cooperação internacional...
+                        </p>
+                    </div>
+
+                    <!-- Center Globe Element -->
+                    <div class="lg:col-span-2 flex justify-center py-6 lg:py-0">
+                        <div class="sec2-reveal-center relative w-32 h-32 flex items-center justify-center opacity-0 scale-75">
+                            <!-- Soft background glow -->
+                            <div class="absolute inset-0 bg-brand-gold/10 blur-[20px] rounded-full pointer-events-none -z-10 animate-pulse-slow"></div>
+                            
+                            <!-- Animated SVG Globe -->
+                            <svg class="w-20 h-20 text-brand-gold select-none pointer-events-none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="animate-[spin_24s_linear_infinite]" cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="4 4" />
+                                <circle class="animate-[spin_18s_linear_infinite_reverse]" cx="50" cy="50" r="38" fill="none" stroke="rgba(111,168,245,0.3)" stroke-width="0.5" stroke-dasharray="15 5 5 5" />
+                                <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="1.25" />
+                                <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="0.75" />
+                                <path d="M24 35 Q50 42 76 35" fill="none" stroke="rgba(244,246,250,0.15)" stroke-width="0.75" />
+                                <path d="M24 65 Q50 58 76 65" fill="none" stroke="rgba(244,246,250,0.15)" stroke-width="0.75" />
+                                <ellipse cx="50" cy="50" rx="18" ry="30" fill="none" stroke="currentColor" stroke-width="0.75" />
+                                <ellipse cx="50" cy="50" rx="8" ry="30" fill="none" stroke="rgba(111,168,245,0.4)" stroke-width="0.5" />
+                                <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="0.75" />
+                                <circle class="animate-ping" cx="50" cy="50" r="4" fill="#6FA8F5" style="animation-duration: 3s;" />
+                                <circle cx="50" cy="50" r="2.5" fill="#D4B47A" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Right Copy (Second half of main text) -->
+                    <div class="lg:col-span-5 text-left">
+                        <p class="sec2-reveal-right text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide opacity-0 translate-x-8">
+                            ...até as questões mais delicadas da prática: divórcios obtidos no exterior, decisões arbitrais, partilhas de bens em múltiplos países, guarda de filhos, adoções internacionais e contratos transnacionais. Mais do que um manual, a obra entrega um método de raciocínio para enfrentar casos reais com segurança técnica e estratégica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Takeaways Grid ("O que você vai encontrar") -->
+                <div class="sec2-card-container">
+                    <div class="sec2-reveal flex justify-center mb-10 opacity-0 translate-y-4">
+                        <h3 class="text-xs uppercase tracking-[0.2em] text-brand-pink text-center font-bold font-sans">
+                            O que você vai encontrar na obra
+                        </h3>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+                        <!-- Takeaway Card 1 -->
+                        <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
+                            <div class="space-y-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300">
+                                    <i data-lucide="file-check" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-serif text-white tracking-wide leading-snug">Conformidade e Regulação</h4>
+                                <p class="text-xs font-sans font-light text-brand-light/60 leading-relaxed">
+                                    Análise atualizada conforme o CPC/2015 e o Regimento Interno do STJ.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Takeaway Card 2 -->
+                        <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
+                            <div class="space-y-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-pink/10 flex items-center justify-center text-brand-pink group-hover:bg-brand-pink group-hover:text-brand-dark transition-colors duration-300">
+                                    <i data-lucide="gavel" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-serif text-white tracking-wide leading-snug">Jurisprudência Consolidada</h4>
+                                <p class="text-xs font-sans font-light text-brand-light/60 leading-relaxed">
+                                    Jurisprudência comentada com os principais precedentes da Corte Especial.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Takeaway Card 3 -->
+                        <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
+                            <div class="space-y-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300">
+                                    <i data-lucide="landmark" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-serif text-white tracking-wide leading-snug">Via Administrativa</h4>
+                                <p class="text-xs font-sans font-light text-brand-light/60 leading-relaxed">
+                                    Capítulo dedicado à homologação de divórcios consensuais por via administrativa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Takeaway Card 4 -->
+                        <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] lg:max-w-[340px] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
+                            <div class="space-y-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-pink/10 flex items-center justify-center text-brand-pink group-hover:bg-brand-pink group-hover:text-brand-dark transition-colors duration-300">
+                                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-serif text-white tracking-wide leading-snug">Aplicação Prática</h4>
+                                <p class="text-xs font-sans font-light text-brand-light/60 leading-relaxed">
+                                    Aplicação prática para advogados, magistrados, registradores e consultores.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Takeaway Card 5 -->
+                        <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] lg:max-w-[340px] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
+                            <div class="space-y-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300">
+                                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-serif text-white tracking-wide leading-snug">Casos Reais do Dia a Dia</h4>
+                                <p class="text-xs font-sans font-light text-brand-light/60 leading-relaxed">
+                                    Linguagem técnica acessível, com casos reais e situações recorrentes do dia a dia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts initialization -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Initialize Lucide Icons
+            lucide.createIcons();
+
+            // 2. Initialize Lenis Smooth Scroll
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // 3. Custom trailing cursor (desktop pointer movements only)
+            const cursorDot = document.querySelector('.custom-cursor-dot');
+            const cursorRing = document.querySelector('.custom-cursor-ring');
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+            if (cursorDot && cursorRing && !isTouchDevice && window.innerWidth > 1024) {
+                let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+                let dotX = mouseX, dotY = mouseY;
+                let ringX = mouseX, ringY = mouseY;
+                
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
+                
+                // GSAP ticker for smooth cursor trailing
+                gsap.ticker.add(() => {
+                    const dt = 1.0 - Math.exp(-0.25); // lerp interpolation factor for responsiveness
+                    dotX += (mouseX - dotX) * dt;
+                    dotY += (mouseY - dotY) * dt;
+                    
+                    const ringDt = 1.0 - Math.exp(-0.08); // smoother/slower lerp for the outer ring
+                    ringX += (mouseX - ringX) * ringDt;
+                    ringY += (mouseY - ringY) * ringDt;
+
+                    gsap.set(cursorDot, { x: dotX, y: dotY });
+                    gsap.set(cursorRing, { x: ringX, y: ringY });
+                });
+                
+                // Expand and color cursor ring on interactive hoverables
+                const hoverables = document.querySelectorAll('a, button, input, select, textarea, [role="button"], img.book-wrapper-3d');
+                hoverables.forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        cursorRing.style.width = '52px';
+                        cursorRing.style.height = '52px';
+                        cursorRing.style.borderColor = '#D4B47A';
+                        cursorRing.style.backgroundColor = 'rgba(212, 180, 122, 0.08)';
+                        cursorDot.style.transform = 'translate(-50%, -50%) scale(0.6)';
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        cursorRing.style.width = '36px';
+                        cursorRing.style.height = '36px';
+                        cursorRing.style.borderColor = 'rgba(111, 168, 245, 0.4)';
+                        cursorRing.style.backgroundColor = 'transparent';
+                        cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                    });
+                });
+            } else {
+                // Hide cursors if touch device or smaller screen
+                if (cursorDot) cursorDot.style.display = 'none';
+                if (cursorRing) cursorRing.style.display = 'none';
+            }
+
+            // 4. Split H1 title words using SplitType library
+            const splitTitle = new SplitType('.split-title', { types: 'words' });
+            
+            // Re-apply special formatting classes for specific words in the title
+            // Title: "Homologação de Sentença Estrangeira no Brasil"
+            // Words: 0: Homologação, 1: de, 2: Sentença, 3: Estrangeira, 4: no, 5: Brasil
+            if (splitTitle.words && splitTitle.words.length >= 6) {
+                // Word 3: "Estrangeira" -> Italic and Gold
+                splitTitle.words[3].classList.add('italic', 'text-brand-gold');
+                // Word 4: "no" -> Text Gradient
+                splitTitle.words[4].classList.add('text-gradient');
+                // Word 5: "Brasil" -> Text Gradient
+                splitTitle.words[5].classList.add('text-gradient');
+            }
+
+            // 5. GSAP Entrance Animations timeline
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (prefersReducedMotion) {
+                // Instantly set elements opacity and bypass complex movements
+                gsap.set('.navbar-reveal, .hero-eyebrow, .split-title, .hero-divider, .hero-subtitle, .hero-description, .hero-cta, .book-gsap-reveal, .scroll-indicator', { 
+                    opacity: 1, 
+                    y: 0, 
+                    x: 0,
+                    scale: 1, 
+                    rotateY: 0,
+                    filter: 'blur(0px)'
+                });
+                gsap.set(splitTitle.words, {
+                    opacity: 1,
+                    y: 0
+                });
+            } else {
+                const tl = gsap.timeline();
+
+                // Fade-in navigation bar
+                tl.to('.navbar-reveal', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.0,
+                    ease: 'power3.out'
+                });
+
+                // Stagger eyebrow and split title words
+                tl.to('.hero-eyebrow', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out'
+                }, '-=0.6');
+
+                // Animate heading letters/words
+                tl.to(splitTitle.words, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.9,
+                    stagger: 0.08,
+                    ease: 'power4.out'
+                }, '-=0.6');
+
+                // Animate divider line
+                tl.to('.hero-divider', {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: 'power2.out'
+                }, '-=0.5');
+
+                // Stagger paragraph, description and CTA
+                tl.to('.hero-subtitle', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out'
+                }, '-=0.5');
+
+                tl.to('.hero-description', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out'
+                }, '-=0.6');
+
+                tl.to('.hero-cta', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'back.out(1.6)'
+                }, '-=0.6');
+
+                // Reveal Book mockup cover with fade-in and blur-in
+                tl.to('.book-gsap-reveal', {
+                    opacity: 1,
+                    filter: 'blur(0px)',
+                    duration: 1.4,
+                    ease: 'power3.out'
+                }, '-=0.9');
+
+                tl.to('.scroll-indicator', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out'
+                }, '-=0.4');
+            }
+
+            // 7. GSAP ScrollTrigger Animations for Section 2
+            if (!prefersReducedMotion) {
+                // Register ScrollTrigger
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Section 2 Header trigger
+                gsap.to('.sec2-reveal', {
+                    scrollTrigger: {
+                        trigger: '#sobre-o-livro',
+                        start: 'top 80%',
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.0,
+                    stagger: 0.15,
+                    ease: 'power3.out'
+                });
+
+                // Split Left text trigger
+                gsap.to('.sec2-reveal-left', {
+                    scrollTrigger: {
+                        trigger: '#sobre-o-livro',
+                        start: 'top 70%',
+                    },
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.0,
+                    ease: 'power3.out'
+                });
+
+                // Split Center globe trigger
+                gsap.to('.sec2-reveal-center', {
+                    scrollTrigger: {
+                        trigger: '#sobre-o-livro',
+                        start: 'top 70%',
+                    },
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.2,
+                    ease: 'back.out(1.5)'
+                });
+
+                // Split Right text trigger
+                gsap.to('.sec2-reveal-right', {
+                    scrollTrigger: {
+                        trigger: '#sobre-o-livro',
+                        start: 'top 70%',
+                    },
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.0,
+                    ease: 'power3.out'
+                });
+
+                // Bento cards trigger
+                gsap.to('.sec2-card', {
+                    scrollTrigger: {
+                        trigger: '.sec2-card-container',
+                        start: 'top 85%',
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.12,
+                    ease: 'power3.out'
+                });
+            } else {
+                // Instantly set Section 2 values
+                gsap.set('.sec2-reveal, .sec2-reveal-left, .sec2-reveal-center, .sec2-reveal-right, .sec2-card', {
+                    opacity: 1,
+                    y: 0,
+                    x: 0,
+                    scale: 1
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
