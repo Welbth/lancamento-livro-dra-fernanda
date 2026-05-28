@@ -239,27 +239,48 @@
     </div>
 
     <!-- Global Top Glass Navigation -->
-    <nav class="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-6xl z-50 transition-all duration-300 navbar-reveal opacity-0 -translate-y-4">
-        <div class="glass-panel rounded-full p-2 pl-5 pr-5 flex items-center justify-between shadow-2xl">
-            <!-- Brand Logo -->
-            <div class="flex items-center gap-3">
-                <div class="w-3.5 h-3.5 bg-brand-gold rounded-sm rotate-45 shadow-[0_0_12px_rgba(212,180,122,0.8)] animate-[spin_10s_linear_infinite]"></div>
-                <div class="flex flex-col">
-                    <span class="text-xs font-serif tracking-widest text-white leading-none">DRA. FERNANDA</span>
-                    <span class="text-[8px] uppercase tracking-[0.25em] text-brand-pink leading-none mt-0.5 font-bold">Lançamento Editorial</span>
-                </div>
-            </div>
-            <!-- Navigation Links -->
+    <nav class="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[95%] md:w-[80%] lg:w-[680px] z-50 transition-all duration-300 navbar-reveal opacity-0 -translate-y-4">
+        <!-- Main Navbar Pill -->
+        <div class="glass-panel rounded-full p-2 pl-4 pr-2 lg:px-6 flex items-center justify-between shadow-2xl relative z-20">
+            <!-- Hamburger Button (Mobile/Tablet only: from 1023px down) -->
+            <button id="hamburger-btn" class="lg:hidden flex items-center justify-center p-2 rounded-full text-brand-light/60 hover:text-brand-gold focus:outline-none transition-colors" aria-label="Menu">
+                <svg id="hamburger-icon" class="w-5 h-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="w-5 h-5 hidden transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <!-- Navigation Links (aligned to the left) -->
             <div class="hidden lg:flex items-center gap-8">
+                <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#hero">Início</a>
                 <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#sobre-o-livro">A Obra</a>
                 <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#detalhes">Conteúdo</a>
                 <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#sobre-a-autora">Autora</a>
+                <a class="text-[10px] font-bold uppercase tracking-wider text-brand-light/50 hover:text-brand-gold transition-colors duration-300" href="#comprar">Comprar</a>
             </div>
-            <!-- Action Button -->
-            <div>
-                <a class="bg-white text-brand-dark px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.15)] inline-block active:scale-95" href="#comprar">
-                    Comprar
+            
+            <!-- Action Button (Conic Spinning Border matching the Hero style) -->
+            <div class="ml-auto lg:ml-0">
+                <a class="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1px] focus:outline-none hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-[0_4px_15px_rgba(212,180,122,0.1)] hover:shadow-[0_6px_20px_rgba(212,180,122,0.2)]" href="#comprar">
+                    <span class="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0E2347_0%,#D4B47A_50%,#0E2347_100%)]"></span>
+                    <span class="inline-flex h-full w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-brand-panel px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-3xl transition-all group-hover:bg-[#0e182a] duration-300">
+                        <span>Comprar</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-gold group-hover:translate-x-0.5 transition-transform duration-300"></i>
+                    </span>
                 </a>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu (Under the pill, absolute positioned) -->
+        <div id="mobile-menu" class="absolute top-[calc(100%+8px)] left-0 w-full glass-panel rounded-2xl p-4 shadow-2xl opacity-0 translate-y-[-10px] pointer-events-none transition-all duration-300 z-10 lg:hidden">
+            <div class="flex flex-col space-y-4 text-center">
+                <a class="mobile-menu-link text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light/70 hover:text-brand-gold transition-colors py-2.5" href="#hero">Início</a>
+                <a class="mobile-menu-link text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light/70 hover:text-brand-gold transition-colors py-2.5" href="#sobre-o-livro">A Obra</a>
+                <a class="mobile-menu-link text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light/70 hover:text-brand-gold transition-colors py-2.5" href="#detalhes">Conteúdo</a>
+                <a class="mobile-menu-link text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light/70 hover:text-brand-gold transition-colors py-2.5" href="#sobre-a-autora">Autora</a>
+                <a class="mobile-menu-link text-[10px] font-bold uppercase tracking-[0.2em] text-brand-light/70 hover:text-brand-gold transition-colors py-2.5" href="#comprar">Comprar</a>
             </div>
         </div>
     </nav>
@@ -276,7 +297,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                     
                     <!-- Left Column: Copywriting Narrative -->
-                    <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8 text-left">
+                    <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col items-center lg:items-start justify-center space-y-6 md:space-y-8 text-center lg:text-left">
                         
                         <!-- Eyebrow Tag -->
                         <div class="hero-eyebrow opacity-0 -translate-y-4">
@@ -295,15 +316,15 @@
                         </h1>
 
                         <!-- Gold Divider Line -->
-                        <div class="hero-divider h-[1px] w-48 bg-gradient-to-r from-brand-gold/60 via-brand-pink/20 to-transparent opacity-0 -translate-x-4"></div>
+                        <div class="hero-divider h-[1px] w-48 bg-gradient-to-r from-brand-gold/60 via-brand-pink/20 to-transparent opacity-0 -translate-x-4 mx-auto lg:mx-0"></div>
 
                         <!-- Subtitle -->
-                        <p class="hero-subtitle text-sm md:text-base font-sans font-light text-brand-light/90 max-w-xl leading-relaxed tracking-wide opacity-0 translate-y-4">
+                        <p class="hero-subtitle text-sm md:text-base font-sans font-light text-brand-light/90 max-w-xl leading-relaxed tracking-wide opacity-0 translate-y-4 mx-auto lg:mx-0">
                             A obra de Fernanda Nelsen Teodoro Decesaro que sistematiza, em um único volume, tudo o que o profissional do direito precisa saber sobre o reconhecimento de decisões estrangeiras no ordenamento jurídico brasileiro.
                         </p>
 
                         <!-- Description -->
-                        <p class="hero-description text-xs md:text-sm font-sans font-light text-brand-light/60 max-w-lg leading-relaxed tracking-wide opacity-0 translate-y-4">
+                        <p class="hero-description text-xs md:text-sm font-sans font-light text-brand-light/60 max-w-lg leading-relaxed tracking-wide opacity-0 translate-y-4 mx-auto lg:mx-0">
                             Da fundamentação constitucional aos casos mais sensíveis da prática — divórcios, sucessões, contratos e arbitragens internacionais. Um livro escrito para quem não pode errar.
                         </p>
 
@@ -365,7 +386,7 @@
                 <!-- Split Content Layout -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-24">
                     <!-- Left Copy (First half of main text) -->
-                    <div class="lg:col-span-5 text-left sec2-reveal-left opacity-0 -translate-x-8">
+                    <div class="lg:col-span-5 text-center lg:text-left sec2-reveal-left opacity-0 -translate-x-8">
                         <div class="glass-panel rounded-2xl p-6 md:p-8 hover:border-brand-gold/20 transition-all duration-300">
                             <h4 class="text-brand-gold font-serif text-lg font-medium mb-3">Fundamentos</h4>
                             <p class="text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide">
@@ -401,12 +422,12 @@
                                 
                                 <!-- Small central node -->
                                 <circle cx="50" cy="50" r="2.5" fill="#D4B47A" />
-                            </svg>
+                             </svg>
                         </div>
                     </div>
 
                     <!-- Right Copy (Second half of main text) -->
-                    <div class="lg:col-span-5 text-left sec2-reveal-right opacity-0 translate-x-8">
+                    <div class="lg:col-span-5 text-center lg:text-left sec2-reveal-right opacity-0 translate-x-8">
                         <div class="glass-panel rounded-2xl p-6 md:p-8 hover:border-brand-gold/20 transition-all duration-300">
                             <h4 class="text-brand-gold font-serif text-lg font-medium mb-3">Aplicação prática</h4>
                             <p class="text-sm md:text-base font-sans font-light text-brand-light/75 leading-relaxed tracking-wide">
@@ -427,7 +448,7 @@
                     <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
                         <!-- Takeaway Card 1 -->
                         <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
-                            <div class="space-y-4">
+                            <div class="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                                 <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300">
                                     <i data-lucide="file-check" class="w-5 h-5"></i>
                                 </div>
@@ -440,7 +461,7 @@
 
                         <!-- Takeaway Card 2 -->
                         <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
-                            <div class="space-y-4">
+                            <div class="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                                 <div class="w-10 h-10 rounded-lg bg-brand-pink/10 flex items-center justify-center text-brand-pink group-hover:bg-brand-pink group-hover:text-brand-dark transition-colors duration-300">
                                     <i data-lucide="gavel" class="w-5 h-5"></i>
                                 </div>
@@ -453,7 +474,7 @@
 
                         <!-- Takeaway Card 3 -->
                         <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
-                            <div class="space-y-4">
+                            <div class="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                                 <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300">
                                     <i data-lucide="landmark" class="w-5 h-5"></i>
                                 </div>
@@ -466,7 +487,7 @@
 
                         <!-- Takeaway Card 4 -->
                         <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] lg:max-w-[340px] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
-                            <div class="space-y-4">
+                            <div class="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                                 <div class="w-10 h-10 rounded-lg bg-brand-pink/10 flex items-center justify-center text-brand-pink group-hover:bg-brand-pink group-hover:text-brand-dark transition-colors duration-300">
                                     <i data-lucide="briefcase" class="w-5 h-5"></i>
                                 </div>
@@ -479,7 +500,7 @@
 
                         <!-- Takeaway Card 5 -->
                         <div class="sec2-card w-full sm:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] lg:max-w-[340px] glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 group opacity-0 translate-y-6">
-                            <div class="space-y-4">
+                            <div class="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                                 <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300">
                                     <i data-lucide="book-open" class="w-5 h-5"></i>
                                 </div>
@@ -515,7 +536,7 @@
                     </div>
 
                     <!-- Right Column: Pill, Title, Subtitle, Accordions -->
-                    <div class="lg:col-span-6 text-left flex flex-col justify-center space-y-6">
+                    <div class="lg:col-span-6 text-center lg:text-left flex flex-col items-center lg:items-start justify-center space-y-6">
                         <!-- Pill Tag -->
                         <div class="sec3-reveal opacity-0 translate-y-4">
                             <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-brand-pink/20 bg-brand-purple/10 backdrop-blur-md">
@@ -529,38 +550,38 @@
                         </h2>
 
                         <!-- Subtitle -->
-                        <p class="sec3-reveal text-sm font-sans font-light text-brand-light/75 max-w-xl leading-relaxed tracking-wide opacity-0 translate-y-4">
+                        <p class="sec3-reveal text-sm font-sans font-light text-brand-light/75 max-w-xl leading-relaxed tracking-wide opacity-0 translate-y-4 mx-auto lg:mx-0">
                             Clique em cada capítulo para ver as subdivisões e os tópicos abordados em cada um deles.
                         </p>
 
                         <!-- Accordions -->
-                        <div class="sec3-reveal accordion-container space-y-4 pt-4 opacity-0 translate-y-4">
+                        <div class="sec3-reveal accordion-container space-y-4 pt-4 opacity-0 translate-y-4 w-full">
                             <!-- Accordion Item 1 -->
                             <div class="accordion-item border-b border-white/10 pb-4 transition-all duration-300">
-                                <button class="accordion-header flex items-center justify-between w-full text-left py-3 cursor-pointer select-none group focus:outline-none">
-                                    <span class="text-base md:text-lg font-serif text-white group-hover:text-brand-gold transition-colors duration-300 font-medium">
+                                <button class="accordion-header flex items-center justify-between w-full py-3 cursor-pointer select-none group focus:outline-none">
+                                    <span class="text-base md:text-lg font-serif text-white group-hover:text-brand-gold transition-colors duration-300 font-medium w-full text-center lg:text-left">
                                         1. Fundamentos e Soberania
                                     </span>
-                                    <span class="accordion-icon w-6 h-6 flex items-center justify-center text-brand-pink transition-transform duration-300 ease-out">
+                                    <span class="accordion-icon w-6 h-6 flex items-center justify-center text-brand-pink transition-transform duration-300 ease-out flex-shrink-0 ml-2">
                                         <i data-lucide="plus" class="w-5 h-5"></i>
                                     </span>
                                 </button>
                                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                    <ul class="space-y-3 pt-2 pb-4 pl-2 text-xs md:text-sm font-sans font-light text-brand-light/70 leading-relaxed">
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                    <ul class="space-y-3 pt-2 pb-4 pl-0 lg:pl-2 text-xs md:text-sm font-sans font-light text-brand-light/70 leading-relaxed flex flex-col items-center lg:items-start w-full">
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Jurisdição e os limites do poder estatal</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Cooperação jurídica internacional</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>A ordem pública como filtro de reconhecimento</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Tratados e convenções aplicáveis ao Brasil</span>
                                         </li>
                                     </ul>
@@ -569,30 +590,30 @@
 
                             <!-- Accordion Item 2 -->
                             <div class="accordion-item border-b border-white/10 pb-4 transition-all duration-300">
-                                <button class="accordion-header flex items-center justify-between w-full text-left py-3 cursor-pointer select-none group focus:outline-none">
-                                    <span class="text-base md:text-lg font-serif text-white group-hover:text-brand-gold transition-colors duration-300 font-medium">
+                                <button class="accordion-header flex items-center justify-between w-full py-3 cursor-pointer select-none group focus:outline-none">
+                                    <span class="text-base md:text-lg font-serif text-white group-hover:text-brand-gold transition-colors duration-300 font-medium w-full text-center lg:text-left">
                                         2. Requisitos e Procedimento no STJ
                                     </span>
-                                    <span class="accordion-icon w-6 h-6 flex items-center justify-center text-brand-pink transition-transform duration-300 ease-out">
+                                    <span class="accordion-icon w-6 h-6 flex items-center justify-center text-brand-pink transition-transform duration-300 ease-out flex-shrink-0 ml-2">
                                         <i data-lucide="plus" class="w-5 h-5"></i>
                                     </span>
                                 </button>
                                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                    <ul class="space-y-3 pt-2 pb-4 pl-2 text-xs md:text-sm font-sans font-light text-brand-light/70 leading-relaxed">
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                    <ul class="space-y-3 pt-2 pb-4 pl-0 lg:pl-2 text-xs md:text-sm font-sans font-light text-brand-light/70 leading-relaxed flex flex-col items-center lg:items-start w-full">
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Competência da Corte Especial</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Documentos e formalidades exigidas</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Tradução juramentada e legalização consular / apostilamento</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Citação, contraditório e trânsito em julgado no país de origem</span>
                                         </li>
                                     </ul>
@@ -601,30 +622,30 @@
 
                             <!-- Accordion Item 3 -->
                             <div class="accordion-item border-b border-white/10 pb-4 transition-all duration-300">
-                                <button class="accordion-header flex items-center justify-between w-full text-left py-3 cursor-pointer select-none group focus:outline-none">
-                                    <span class="text-base md:text-lg font-serif text-white group-hover:text-brand-gold transition-colors duration-300 font-medium">
+                                <button class="accordion-header flex items-center justify-between w-full py-3 cursor-pointer select-none group focus:outline-none">
+                                    <span class="text-base md:text-lg font-serif text-white group-hover:text-brand-gold transition-colors duration-300 font-medium w-full text-center lg:text-left">
                                         3. Aplicação Prática por Tipo de Decisão
                                     </span>
-                                    <span class="accordion-icon w-6 h-6 flex items-center justify-center text-brand-pink transition-transform duration-300 ease-out">
+                                    <span class="accordion-icon w-6 h-6 flex items-center justify-center text-brand-pink transition-transform duration-300 ease-out flex-shrink-0 ml-2">
                                         <i data-lucide="plus" class="w-5 h-5"></i>
                                     </span>
                                 </button>
                                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                    <ul class="space-y-3 pt-2 pb-4 pl-2 text-xs md:text-sm font-sans font-light text-brand-light/70 leading-relaxed">
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                    <ul class="space-y-3 pt-2 pb-4 pl-0 lg:pl-2 text-xs md:text-sm font-sans font-light text-brand-light/70 leading-relaxed flex flex-col items-center lg:items-start w-full">
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Divórcios e dissolução de união obtidos no exterior</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Sucessões e partilha de bens em múltiplos países</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Guarda de filhos e adoções internacionais</span>
                                         </li>
-                                        <li class="flex items-start gap-3">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0"></span>
+                                        <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 text-center lg:text-left w-full">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mt-0 lg:mt-2 flex-shrink-0"></span>
                                             <span>Sentenças arbitrais e contratos transnacionais</span>
                                         </li>
                                     </ul>
@@ -646,9 +667,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                     
                     <!-- Left Column: Biography & Info -->
-                    <div class="lg:col-span-6 text-left flex flex-col justify-center space-y-6 order-2 lg:order-1 sec4-reveal opacity-0 translate-y-4">
+                    <div class="lg:col-span-6 text-center lg:text-left flex flex-col items-center lg:items-start justify-center space-y-6 order-2 lg:order-1 sec4-reveal opacity-0 translate-y-4">
                         <!-- Eyebrow Tag -->
-                        <div class="inline-flex items-center self-start gap-2.5 px-4 py-1.5 rounded-full border border-brand-pink/20 bg-brand-purple/10 backdrop-blur-md">
+                        <div class="inline-flex items-center self-center lg:self-start gap-2.5 px-4 py-1.5 rounded-full border border-brand-pink/20 bg-brand-purple/10 backdrop-blur-md">
                             <span class="text-[9px] font-bold text-brand-pink tracking-[0.2em] uppercase">A Autora</span>
                         </div>
                         
@@ -757,40 +778,40 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch mt-12 mb-16 sec5-reveal opacity-0 translate-y-4">
                     
                     <!-- Left Column: Is for you -->
-                    <div class="lg:col-span-5 glass-panel rounded-3xl p-6 md:p-8 flex flex-col space-y-6 hover:border-brand-gold/30 hover:shadow-[0_0_35px_rgba(212,180,122,0.08)] transition-all duration-500">
-                        <h3 class="text-lg md:text-xl font-serif text-brand-gold font-medium border-b border-white/5 pb-3">
+                    <div class="lg:col-span-5 glass-panel rounded-3xl p-6 md:p-8 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 hover:border-brand-gold/30 hover:shadow-[0_0_35px_rgba(212,180,122,0.08)] transition-all duration-500">
+                        <h3 class="text-lg md:text-xl font-serif text-brand-gold font-medium border-b border-white/5 pb-3 w-full text-center lg:text-left">
                             É para você se:
                         </h3>
-                        <ul class="space-y-4 text-xs md:text-sm font-sans font-light text-brand-light/80 leading-relaxed">
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0.5">
+                        <ul class="space-y-4 text-xs md:text-sm font-sans font-light text-brand-light/80 leading-relaxed w-full flex flex-col items-center lg:items-start">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="check-circle-2" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você atende clientes com vínculos jurídicos no exterior</span>
+                                <span class="text-center lg:text-left">Você atende clientes com vínculos jurídicos no exterior</span>
                             </li>
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0.5">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="check-circle-2" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você trava em processos de homologação por falta de uma referência confiável</span>
+                                <span class="text-center lg:text-left">Você trava em processos de homologação por falta de uma referência confiável</span>
                             </li>
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0.5">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="check-circle-2" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você quer dominar divórcios, sucessões e contratos internacionais com segurança</span>
+                                <span class="text-center lg:text-left">Você quer dominar divórcios, sucessões e contratos internacionais com segurança</span>
                             </li>
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0.5">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="check-circle-2" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você é registrador, advogado ou consultor e não pode errar nesse tema</span>
+                                <span class="text-center lg:text-left">Você é registrador, advogado ou consultor e não pode errar nesse tema</span>
                             </li>
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0.5">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="check-circle-2" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você estuda direito internacional privado e quer base sólida, não superficial</span>
+                                <span class="text-center lg:text-left">Você estuda direito internacional privado e quer base sólida, não superficial</span>
                             </li>
                         </ul>
                     </div>
@@ -805,28 +826,28 @@
                     </div>
 
                     <!-- Right Column: Is NOT for you -->
-                    <div class="lg:col-span-5 glass-panel rounded-3xl p-6 md:p-8 flex flex-col space-y-6 hover:border-brand-pink/20 hover:shadow-[0_0_30px_rgba(111,168,245,0.04)] transition-all duration-500 bg-white/[0.005]">
-                        <h3 class="text-lg md:text-xl font-serif text-brand-pink/70 font-medium border-b border-white/5 pb-3">
+                    <div class="lg:col-span-5 glass-panel rounded-3xl p-6 md:p-8 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 hover:border-brand-pink/20 hover:shadow-[0_0_30px_rgba(111,168,245,0.04)] transition-all duration-500 bg-white/[0.005]">
+                        <h3 class="text-lg md:text-xl font-serif text-brand-pink/70 font-medium border-b border-white/5 pb-3 w-full text-center lg:text-left">
                             Não é para você se:
                         </h3>
-                        <ul class="space-y-4 text-xs md:text-sm font-sans font-light text-brand-light/60 leading-relaxed">
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-pink/5 flex items-center justify-center text-brand-pink/40 group-hover:bg-brand-pink/20 group-hover:text-brand-pink transition-colors duration-300 flex-shrink-0 mt-0.5">
+                        <ul class="space-y-4 text-xs md:text-sm font-sans font-light text-brand-light/60 leading-relaxed w-full flex flex-col items-center lg:items-start">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-pink/5 flex items-center justify-center text-brand-pink/40 group-hover:bg-brand-pink/20 group-hover:text-brand-pink transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="x-circle" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você busca um resumo raso de internet</span>
+                                <span class="text-center lg:text-left">Você busca um resumo raso de internet</span>
                             </li>
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-pink/5 flex items-center justify-center text-brand-pink/40 group-hover:bg-brand-pink/20 group-hover:text-brand-pink transition-colors duration-300 flex-shrink-0 mt-0.5">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-pink/5 flex items-center justify-center text-brand-pink/40 group-hover:bg-brand-pink/20 group-hover:text-brand-pink transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="x-circle" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você nunca pretende lidar com decisões estrangeiras</span>
+                                <span class="text-center lg:text-left">Você nunca pretende lidar com decisões estrangeiras</span>
                             </li>
-                            <li class="flex items-start gap-3 group">
-                                <span class="w-5 h-5 rounded-full bg-brand-pink/5 flex items-center justify-center text-brand-pink/40 group-hover:bg-brand-pink/20 group-hover:text-brand-pink transition-colors duration-300 flex-shrink-0 mt-0.5">
+                            <li class="flex items-center lg:items-start justify-center lg:justify-start gap-3 group w-full">
+                                <span class="w-5 h-5 rounded-full bg-brand-pink/5 flex items-center justify-center text-brand-pink/40 group-hover:bg-brand-pink/20 group-hover:text-brand-pink transition-colors duration-300 flex-shrink-0 mt-0 lg:mt-0.5">
                                     <i data-lucide="x-circle" class="w-3 h-3"></i>
                                 </span>
-                                <span>Você quer respostas prontas sem entender o raciocínio jurídico por trás</span>
+                                <span class="text-center lg:text-left">Você quer respostas prontas sem entender o raciocínio jurídico por trás</span>
                             </li>
                         </ul>
                     </div>
@@ -856,6 +877,51 @@
         document.addEventListener("DOMContentLoaded", () => {
             // 1. Initialize Lucide Icons
             lucide.createIcons();
+
+            // Mobile Hamburger Menu Toggle
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            if (hamburgerBtn && mobileMenu) {
+                const toggleMenu = () => {
+                    const isOpen = !mobileMenu.classList.contains('pointer-events-none');
+                    if (isOpen) {
+                        mobileMenu.classList.add('pointer-events-none', 'opacity-0', 'translate-y-[-10px]');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    } else {
+                        mobileMenu.classList.remove('pointer-events-none', 'opacity-0', 'translate-y-[-10px]');
+                        hamburgerIcon.classList.add('hidden');
+                        closeIcon.classList.remove('hidden');
+                    }
+                };
+
+                hamburgerBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleMenu();
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                        mobileMenu.classList.add('pointer-events-none', 'opacity-0', 'translate-y-[-10px]');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+
+                // Close menu when a link is clicked
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('pointer-events-none', 'opacity-0', 'translate-y-[-10px]');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    });
+                });
+            }
 
             // 2. Initialize Lenis Smooth Scroll
             const lenis = new Lenis({
