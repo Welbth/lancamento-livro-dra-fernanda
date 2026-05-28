@@ -6,10 +6,10 @@
     <title>Homologação de Sentença Estrangeira no Brasil | Dra. Fernanda Nelsen Teodoro Decesaro</title>
     <meta content="Adquira a obra definitiva de Fernanda Nelsen Teodoro Decesaro sobre o reconhecimento de decisões estrangeiras no ordenamento jurídico brasileiro. Publicado pela Juruá Editora." name="description"/>
     
-    <!-- Fonts: Plus Jakarta Sans, Playfair Display & IBM Plex Mono from Google Fonts CDN -->
+    <!-- Fonts: Poppins (300, 400, 600) from Google Fonts CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=IBM+Plex+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Webflow Stylesheet (Local copy) -->
     <link href="assets/css/webflow.css" rel="stylesheet" type="text/css"/>
@@ -35,9 +35,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                        mono: ['IBM Plex Mono', 'monospace'],
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Poppins', 'sans-serif'],
+                        mono: ['Poppins', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -78,7 +78,7 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
             padding-top: 0 !important;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         /* --- Custom Noise Overlay --- */
@@ -173,7 +173,7 @@
             background: linear-gradient(249deg, #2E86E8, #6FA8F5) !important;
             border: none !important;
             color: #F4F6FA !important;
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-family: 'Poppins', sans-serif !important;
         }
         .main-cta:hover {
             background: linear-gradient(249deg, #1E65B8, #2E86E8) !important;
@@ -312,7 +312,7 @@
                         </div>
 
                         <!-- H1 Title -->
-                        <h1 class="split-title text-4xl sm:text-5xl md:text-6xl font-serif text-white tracking-wide leading-[1.25] font-light">
+                        <h1 class="split-title text-4xl sm:text-5xl md:text-6xl font-serif text-white tracking-wide leading-[1.4] font-semibold">
                             Homologação de Sentença Estrangeira no Brasil
                         </h1>
 
@@ -378,8 +378,8 @@
                     <div class="sec2-reveal flex justify-center mb-4 opacity-0 translate-y-4">
                         <span class="text-[9px] font-bold text-brand-gold tracking-[0.25em] uppercase">CONTEÚDO EXCLUSIVO</span>
                     </div>
-                    <h2 class="sec2-reveal text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.3] max-w-4xl mx-auto opacity-0 translate-y-4">
-                        A referência que faltava sobre o tema <span class="italic text-brand-gold">mais complexo</span> do direito internacional <span class="text-gradient">privado brasileiro</span>
+                    <h2 class="sec2-reveal text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.4] max-w-4xl mx-auto opacity-0 translate-y-4">
+                        A referência que faltava sobre o tema <span class="text-brand-gold">mais complexo</span> do direito internacional <span class="text-gradient">privado brasileiro</span>
                     </h2>
                     <div class="sec2-reveal h-[1px] w-24 bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent mx-auto mt-6 opacity-0 translate-y-4"></div>
                 </div>
@@ -546,7 +546,7 @@
                         </div>
 
                         <!-- H2 Title -->
-                        <h2 class="sec3-reveal text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.3] opacity-0 translate-y-4">
+                        <h2 class="sec3-reveal text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.4] opacity-0 translate-y-4">
                             Esta é a estrutura dos temas que você vai encontrar no livro.
                         </h2>
 
@@ -675,7 +675,7 @@
                         </div>
                         
                         <!-- Title -->
-                        <h2 class="text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.3]">
+                        <h2 class="text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.4]">
                             Conheça <span class="text-gradient">Fernanda Nelsen Teodoro Decesaro</span>
                         </h2>
 
@@ -769,7 +769,7 @@
                     <div class="flex justify-center mb-4">
                         <span class="text-[9px] font-bold text-brand-gold tracking-[0.25em] uppercase">Antes de comprar</span>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.3]">
+                    <h2 class="text-3xl md:text-5xl font-serif text-white tracking-tight leading-[1.4]">
                         Este livro é para você?
                     </h2>
                     <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent mx-auto mt-6"></div>
@@ -1019,8 +1019,8 @@
             // Title: "Homologação de Sentença Estrangeira no Brasil"
             // Words: 0: Homologação, 1: de, 2: Sentença, 3: Estrangeira, 4: no, 5: Brasil
             if (splitTitle.words && splitTitle.words.length >= 6) {
-                // Word 3: "Estrangeira" -> Italic and Gold
-                splitTitle.words[3].classList.add('italic', 'text-brand-gold');
+                // Word 3: "Estrangeira" -> Gold only (no italic)
+                splitTitle.words[3].classList.add('text-brand-gold');
                 // Word 4: "no" -> Text Gradient
                 splitTitle.words[4].classList.add('text-gradient');
                 // Word 5: "Brasil" -> Text Gradient
