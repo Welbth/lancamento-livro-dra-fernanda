@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="overflow-x-hidden" lang="pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -79,11 +79,17 @@
     </script>
 
     <style>
+        /* Custom scrollbar for Firefox and standard scroll behavior */
+        html {
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: #D4B47A #0E2347;
+        }
+
         /* CSS resets and custom updates */
         body {
             color: #F4F6FA;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
             padding-top: 0 !important;
             font-family: 'Poppins', sans-serif;
         }
@@ -151,7 +157,7 @@
         /* --- Custom Scrollbar --- */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #0E2347; }
-        ::-webkit-scrollbar-thumb { background: #1A3566; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background: #D4B47A; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #D4B47A; }
 
         /* --- Text Gradients --- */
@@ -245,7 +251,7 @@
         }
     </style>
 </head>
-<body class="relative min-h-screen selection:bg-brand-gold selection:text-brand-dark overflow-x-hidden">
+<body class="relative min-h-screen selection:bg-brand-gold selection:text-brand-dark">
 
     <!-- Subtle Grain Noise Overlay -->
     <div class="noise-overlay"></div>

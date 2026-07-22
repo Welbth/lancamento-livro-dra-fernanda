@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Fernanda Nelsen Teodoro Decesaro – Sociedade Individual de Advocacia | Assertividade e Resultados</title>
+    <title>Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia OAB/PR 4.481 | Assertividade e Resultados</title>
     <meta content="Escritório de advocacia boutique focado em soluções jurídicas de alta performance, excelência consultiva e defesa estratégica institucional." name="description"/>
     
     <!-- Fonts: Google Fonts Lora CDN (Exclusive Font Family) -->
@@ -72,6 +72,30 @@
 
     <!-- Global CSS Custom Overrides (Strictly aligned with ds1.html) -->
     <style>
+        /* Lenis Smooth Scroll Overrides to prevent double scrollbars */
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overflow: clip;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis.lenis-smooth iframe {
+            pointer-events: none;
+        }
+
+        /* Custom scrollbar for Firefox and standard scroll behavior */
+        html {
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: #B89161 #141414;
+        }
+
         /* Custom scrollbar for premium theme */
         ::-webkit-scrollbar {
             width: 8px;
@@ -80,7 +104,7 @@
             background: #141414;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1A1A1A;
+            background: #B89161; /* Always gold */
             border: 2px solid #141414;
             border-radius: 4px;
         }
@@ -94,7 +118,6 @@
             background-repeat: no-repeat;
             color: #FFFFFF;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
             font-family: 'Lora', serif;
         }
 
@@ -204,7 +227,7 @@
         }
     </style>
 </head>
-<body class="relative min-h-screen selection:bg-brand-gold selection:text-brand-dark overflow-x-hidden antialiased">
+<body class="relative min-h-screen selection:bg-brand-gold selection:text-brand-dark antialiased">
 
     <!-- Subtle Grain Noise Overlay -->
     <div class="noise-overlay"></div>
@@ -224,7 +247,7 @@
             <div class="glass-panel rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
                 <!-- Brand Logo / Identity -->
                 <a href="#hero" aria-label="Ir para a página principal" class="flex items-center space-x-2.5 group">
-                    <img src="assets/images/logo-tda.webp" alt="Fernanda Nelsen Teodoro Decesaro – Sociedade Individual de Advocacia" class="h-11 w-auto object-contain">
+                    <img src="assets/images/logo-horizontal-branco-dourado.svg" alt="Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia OAB/PR 4.481" class="h-7 w-auto object-contain">
                 </a>
                 
                 <!-- Desktop Links (Sleek and Capitalized) -->
@@ -239,9 +262,9 @@
 
                 <!-- Action Button -->
                 <div class="hidden lg:block">
-                    <a href="#contato" aria-label="Falar com um de nossos advogados" class="conic-border-btn hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-[0_4px_15px_rgba(184,145,97,0.1)]">
+                    <a href="#contato" aria-label="Fale Conosco" class="conic-border-btn hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-[0_4px_15px_rgba(184,145,97,0.1)]">
                         <span class="conic-border-btn-inner px-4 py-2.5 text-[9px] font-bold uppercase tracking-wider text-white">
-                            Falar com Advogado
+                            FALE CONOSCO
                         </span>
                     </a>
                 </div>
@@ -269,7 +292,7 @@
             <div class="flex justify-center">
                 <a href="#contato" class="mobile-menu-link conic-border-btn hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-[0_4px_15px_rgba(184,145,97,0.15)] w-full max-w-xs h-11">
                     <span class="conic-border-btn-inner px-8 text-[10px] font-bold uppercase tracking-wider text-white h-full flex items-center justify-center">
-                        Falar com Advogado
+                        FALE CONOSCO
                     </span>
                 </a>
             </div>
@@ -287,7 +310,7 @@
             
             <!-- Hero Logo & Eyebrow Pill -->
             <div class="hero-eyebrow transform -translate-y-4 opacity-0 pointer-events-none flex flex-col items-center space-y-4">
-                <img src="assets/images/logo-tda.webp" alt="Fernanda Nelsen Teodoro Decesaro – Sociedade Individual de Advocacia" class="h-16 md:h-20 w-auto object-contain">
+                <img src="assets/images/logo-vertical-branco-dourado.svg" alt="Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia OAB/PR 4.481" class="h-16 md:h-20 w-auto object-contain">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-gold/20 bg-brand-panel/60 backdrop-blur-md">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-brand-gold"></span>
@@ -415,7 +438,7 @@
                 <span class="text-[9px] font-bold text-brand-gold tracking-[0.3em] uppercase block">01 / NOSSA TRAJETÓRIA</span>
                 <h2 class="text-3xl sm:text-5xl font-serif text-white tracking-wide uppercase">NOSSA HISTÓRIA</h2>
                 <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-brand-gold/60 to-transparent mx-auto"></div>
-                <p class="text-[10px] uppercase tracking-[0.2em] text-brand-muted font-bold">Fernanda Nelsen Teodoro Decesaro – Sociedade Individual de Advocacia</p>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-brand-muted font-bold">Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia OAB/PR 4.481</p>
             </div>
 
             <!-- Container da Linha do Tempo -->
@@ -451,7 +474,7 @@
                         <div class="hidden md:block w-[45%]"></div>
                     </div>
 
-                    <!-- Marco 2: A Sociedade Familiar (Direita no desktop) -->
+                    <!-- Marco 2: Compromisso com o Legado (Direita no desktop) -->
                     <div class="timeline-item flex flex-col md:flex-row-reverse items-start md:justify-between relative w-full">
                         <!-- Ponto de Conexão -->
                         <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-brand-dark border-2 border-brand-border flex items-center justify-center z-20 transition-all duration-500 timeline-node">
@@ -464,7 +487,7 @@
                                 <span class="text-xs font-mono font-bold text-brand-gold tracking-widest block mb-2">Sociedade Familiar</span>
                                 <h3 class="font-serif text-lg text-white mb-3">Compromisso com o Legado</h3>
                                 <p class="text-xs text-brand-muted leading-relaxed">
-                                    O escritório Teodoro & Decesaro é uma empresa familiar, constituída pelos irmãos <strong class="text-white font-medium">Dra. Fernanda Nelsen Teodoro Decesaro</strong> e <strong class="text-white font-medium">Dr. Milton Teodoro da Silva Filho</strong>, que comprometidos em seguir o legado do pai, constituíram a sociedade, com o compromisso de praticar a advocacia personalizada com o direcionamento adequado, nas esferas judicial e extrajudicial.
+                                    Inspirados pelos princípios e pela trajetória de seu pai, os irmãos Dra. Fernanda Nelsen Teodoro Decesaro e Dr. Milton Teodoro da Silva Filho transformaram um legado em propósito. Em 2015, oficializaram essa continuidade com a constituição da Teodoro & Decesaro Sociedade de Advogados, registrada na OAB/PR sob nº 4.481, consolidando uma atuação marcada pela excelência, atendimento personalizado e compromisso com resultados. Em 2026, a Sociedade se torna Fernanda Nelsen Teodoro Decesaro – Sociedade Unipessoal de Advocacia.
                                 </p>
                             </div>
                         </div>
@@ -472,7 +495,7 @@
                         <div class="hidden md:block w-[45%]"></div>
                     </div>
 
-                    <!-- Marco 3: 2015 (Esquerda no desktop) -->
+                    <!-- Marco 3: Inovação e Experiência (Esquerda no desktop) -->
                     <div class="timeline-item flex flex-col md:flex-row items-start md:justify-between relative w-full">
                         <!-- Ponto de Conexão -->
                         <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-brand-dark border-2 border-brand-border flex items-center justify-center z-20 transition-all duration-500 timeline-node">
@@ -482,31 +505,10 @@
                         <!-- Card de Conteúdo -->
                         <div class="w-full md:w-[45%] pl-10 md:pl-0 text-left timeline-card-wrapper opacity-0">
                             <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-brand-gold/10 hover:border-brand-gold/30 hover:bg-brand-panel/80 transition-all duration-300 relative group">
-                                <span class="text-xs font-mono font-bold text-brand-gold tracking-widest block mb-2">2015</span>
-                                <h3 class="font-serif text-lg text-white mb-3">Registro e Consolidação</h3>
-                                <p class="text-xs text-brand-muted leading-relaxed">
-                                    Em 2015, em crescente expansão, tornou-se Sociedade de Advogados, com registro na Ordem dos Advogados do Brasil, seção Paraná, sob <strong class="text-white font-medium">nº 4481</strong>. A consolidação institucional de uma trajetória sólida.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="hidden md:block w-[45%]"></div>
-                    </div>
-
-                    <!-- Marco 4: Presente / Abordagem (Direita no desktop) -->
-                    <div class="timeline-item flex flex-col md:flex-row-reverse items-start md:justify-between relative w-full">
-                        <!-- Ponto de Conexão -->
-                        <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-brand-dark border-2 border-brand-border flex items-center justify-center z-20 transition-all duration-500 timeline-node">
-                            <div class="w-1 h-1 rounded-full bg-brand-gold"></div>
-                        </div>
-                        
-                        <!-- Card de Conteúdo -->
-                        <div class="w-full md:w-[45%] pl-10 md:pl-0 text-left timeline-card-wrapper opacity-0">
-                            <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-brand-gold/10 hover:border-brand-gold/30 hover:bg-brand-panel/80 transition-all duration-300 relative group">
                                 <span class="text-xs font-mono font-bold text-brand-gold tracking-widest block mb-2">Abordagem Contemporânea</span>
-                                <h3 class="font-serif text-lg text-white mb-3">Inovação & Experiência</h3>
+                                <h3 class="font-serif text-lg text-white mb-3">Inovação e Experiência</h3>
                                 <p class="text-xs text-brand-muted leading-relaxed">
-                                    A sociedade é focada em atingir a melhor solução jurídica aos casos sob sua condução. A equipe, multidisciplinar, combina experiência com inovação, buscando atender as peculiaridades de cada caso com orientação precisa para a tomada de decisões estratégicas, sempre atentos às constantes modificações legislativas e jurisprudenciais para a entrega de soluções customizadas e dinâmicas.
+                                    A sociedade é comprometida em alcançar as melhores soluções jurídicas para os casos sob sua condução. Sua atuação multidisciplinar alia experiência, visão estratégica e constante atualização, permitindo compreender as particularidades de cada demanda e oferecer orientações precisas para a tomada de decisões. Atenta às constantes evoluções legislativas e jurisprudenciais, entrega soluções personalizadas, ágeis e alinhadas às necessidades de cada cliente.
                                 </p>
                             </div>
                         </div>
@@ -584,10 +586,10 @@
             <!-- Header de Seção -->
             <div class="text-center space-y-4 max-w-2xl mx-auto profissionais-header opacity-0">
                 <span class="text-[9px] font-bold text-brand-gold tracking-[0.3em] uppercase block">02 / CORPO JURÍDICO</span>
-                <h2 class="text-3xl sm:text-5xl font-serif text-white tracking-wide uppercase">SÓCIA-FUNDADORA</h2>
+                <h2 class="text-3xl sm:text-5xl font-serif text-white tracking-wide uppercase">LIDERANÇA JURÍDICA</h2>
                 <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-brand-gold/60 to-transparent mx-auto"></div>
-                <p class="text-[10px] uppercase tracking-[0.2em] text-brand-muted font-bold">Conheça a fundadora do escritório</p>
-                <p class="text-xs text-brand-muted max-w-lg mx-auto font-normal leading-relaxed">Profissional reconhecida pela ética, eficiência e assertividade</p>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-brand-muted font-bold">Conheça quem está à frente da Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia.</p>
+                <p class="text-xs text-brand-muted max-w-lg mx-auto font-normal leading-relaxed">Profissional reconhecida pela ética, excelência técnica, eficiência e assertividade na condução de demandas jurídicas.</p>
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -615,9 +617,10 @@
                                 
                                 <div class="flex flex-wrap items-center gap-3 pt-2">
                                     <span class="inline-block text-[10px] font-bold text-brand-gold bg-brand-gold/10 border border-brand-gold/25 px-4 py-1.5 rounded-full uppercase tracking-wider">OAB/PR 39.386</span>
-                                    <span class="text-[10px] font-bold text-white bg-brand-panel border border-brand-border px-3 py-1.5 rounded-md uppercase tracking-wider">Direito Migratório</span>
-                                    <span class="text-[10px] font-bold text-white bg-brand-panel border border-brand-border px-3 py-1.5 rounded-md uppercase tracking-wider">Contencioso</span>
+                                    <span class="text-[10px] font-bold text-white bg-brand-panel border border-brand-border px-3 py-1.5 rounded-md uppercase tracking-wider">Direito Internacional</span>
+                                    <span class="text-[10px] font-bold text-white bg-brand-panel border border-brand-border px-3 py-1.5 rounded-md uppercase tracking-wider">Consultivo</span>
                                     <span class="text-[10px] font-bold text-white bg-brand-panel border border-brand-border px-3 py-1.5 rounded-md uppercase tracking-wider">Extrajudicial</span>
+                                    <span class="text-[10px] font-bold text-white bg-brand-panel border border-brand-border px-3 py-1.5 rounded-md uppercase tracking-wider">Local Counsel Brazil</span>
                                 </div>
                             </div>
 
@@ -808,6 +811,66 @@
                             Demandas relacionadas à mobilidade internacional,<br>relações privadas internacionais e ativos em múltiplos países
                         </p>
                     </div>
+
+                    <!-- Topic 10 -->
+                    <div class="min-w-[260px] sm:min-w-[300px] flex-shrink-0 snap-center glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/15 hover:border-brand-gold/40 transition-all duration-300 shadow-xl group flex flex-col justify-start">
+                        <div class="text-4xl font-serif text-brand-gold/20 group-hover:text-brand-gold transition-colors mb-4 font-light">
+                            10
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light group-hover:text-white transition-colors">
+                            Law Firm Partner in Brazil
+                        </p>
+                    </div>
+
+                    <!-- Topic 11 -->
+                    <div class="min-w-[260px] sm:min-w-[300px] flex-shrink-0 snap-center glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/15 hover:border-brand-gold/40 transition-all duration-300 shadow-xl group flex flex-col justify-start">
+                        <div class="text-4xl font-serif text-brand-gold/20 group-hover:text-brand-gold transition-colors mb-4 font-light">
+                            11
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light group-hover:text-white transition-colors">
+                            Brazil-United States Legal Coordination
+                        </p>
+                    </div>
+
+                    <!-- Topic 12 -->
+                    <div class="min-w-[260px] sm:min-w-[300px] flex-shrink-0 snap-center glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/15 hover:border-brand-gold/40 transition-all duration-300 shadow-xl group flex flex-col justify-start">
+                        <div class="text-4xl font-serif text-brand-gold/20 group-hover:text-brand-gold transition-colors mb-4 font-light">
+                            12
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light group-hover:text-white transition-colors">
+                            Corporate Legal Support Brazil
+                        </p>
+                    </div>
+
+                    <!-- Topic 13 -->
+                    <div class="min-w-[260px] sm:min-w-[300px] flex-shrink-0 snap-center glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/15 hover:border-brand-gold/40 transition-all duration-300 shadow-xl group flex flex-col justify-start">
+                        <div class="text-4xl font-serif text-brand-gold/20 group-hover:text-brand-gold transition-colors mb-4 font-light">
+                            13
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light group-hover:text-white transition-colors">
+                            Cross Border Counsel
+                        </p>
+                    </div>
+
+                    <!-- Topic 14 -->
+                    <div class="min-w-[260px] sm:min-w-[300px] flex-shrink-0 snap-center glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/15 hover:border-brand-gold/40 transition-all duration-300 shadow-xl group flex flex-col justify-start">
+                        <div class="text-4xl font-serif text-brand-gold/20 group-hover:text-brand-gold transition-colors mb-4 font-light">
+                            14
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light group-hover:text-white transition-colors">
+                            International Legal Support
+                        </p>
+                    </div>
+
+                    <!-- Topic 15 -->
+                    <div class="min-w-[260px] sm:min-w-[300px] flex-shrink-0 snap-center glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/15 hover:border-brand-gold/40 transition-all duration-300 shadow-xl group flex flex-col justify-start">
+                        <div class="text-4xl font-serif text-brand-gold/20 group-hover:text-brand-gold transition-colors mb-4 font-light">
+                            15
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-light group-hover:text-white transition-colors">
+                            International Legal Liaison
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -937,7 +1000,7 @@
                         <button role="tab" aria-selected="false" aria-controls="panel-1" id="tab-1" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="1">
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs font-mono font-bold text-brand-gold opacity-60">02</span>
-                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Família & Sucessões</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Local Counsel Brazil</span>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
                         </button>
@@ -945,7 +1008,7 @@
                         <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="2">
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs font-mono font-bold text-brand-gold opacity-60">03</span>
-                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Criança & Adolescente</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Família & Sucessões</span>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
                         </button>
@@ -953,7 +1016,7 @@
                         <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="3">
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs font-mono font-bold text-brand-gold opacity-60">04</span>
-                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Gestão Patrimonial</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Criança & Adolescente</span>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
                         </button>
@@ -961,7 +1024,7 @@
                         <button role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="4">
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs font-mono font-bold text-brand-gold opacity-60">05</span>
-                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Consultoria Migratória</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Gestão Patrimonial</span>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
                         </button>
@@ -969,7 +1032,7 @@
                         <button role="tab" aria-selected="false" aria-controls="panel-5" id="tab-5" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="5">
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs font-mono font-bold text-brand-gold opacity-60">06</span>
-                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Direito Internacional</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Consultoria Migratória</span>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
                         </button>
@@ -977,7 +1040,7 @@
                         <button role="tab" aria-selected="false" aria-controls="panel-6" id="tab-6" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="6">
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs font-mono font-bold text-brand-gold opacity-60">07</span>
-                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Direito Contratual</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Direito Internacional</span>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
                         </button>
@@ -985,6 +1048,14 @@
                         <button role="tab" aria-selected="false" aria-controls="panel-7" id="tab-7" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="7">
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs font-mono font-bold text-brand-gold opacity-60">08</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Direito Contratual</span>
+                            </div>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
+                        </button>
+
+                        <button role="tab" aria-selected="false" aria-controls="panel-8" id="tab-8" class="atuacao-menu-btn text-left py-3.5 px-5 rounded-2xl transition-all duration-300 border border-brand-border/40 bg-brand-panel/20 hover:bg-brand-panel/40 flex items-center justify-between group" data-index="8">
+                            <div class="flex items-center space-x-4">
+                                <span class="text-xs font-mono font-bold text-brand-gold opacity-60">09</span>
                                 <span class="text-xs font-bold uppercase tracking-wider text-white group-hover:text-brand-goldlight transition-colors">Direito de Franquias</span>
                             </div>
                             <i data-lucide="chevron-right" class="w-4 h-4 text-brand-gold opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0"></i>
@@ -1021,8 +1092,33 @@
                             </div>
                         </div>
 
-                        <!-- Panel 1: Família e Sucessões -->
+                        <!-- Panel 1: Local Counsel Brazil -->
                         <div id="panel-1" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-1">
+                            <img src="assets/images/atuacao/atuacao-apoio.webp" alt="Local Counsel Brazil" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
+                            
+                            <div class="relative z-20 space-y-4">
+                                <div class="flex items-center space-x-3 text-brand-gold">
+                                    <div class="p-2 rounded-xl bg-brand-gold/10 border border-brand-gold/25">
+                                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                                    </div>
+                                    <span class="text-[9px] font-bold tracking-[0.25em] uppercase">REPRESENTAÇÃO JURÍDICA NO BRASIL</span>
+                                </div>
+                                <h3 class="font-serif text-2xl text-white font-bold tracking-wide">Local Counsel Brazil</h3>
+                                <p class="text-xs text-brand-muted leading-relaxed font-normal text-left">
+                                    A Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia atua como parceira estratégica de empresas, departamentos jurídicos e escritórios de advocacia nacionais e internacionais que necessitam de representação jurídica no Brasil. Com atendimento personalizado, comunicação eficiente e rigoroso compromisso com prazos, oferece suporte em demandas judiciais e extrajudiciais, elaboração de pareceres, due diligence, diligências estratégicas, acompanhamento processual, audiências e demais medidas necessárias à condução segura de interesses perante o ordenamento jurídico brasileiro, integrando-se à estratégia jurídica de seus parceiros com discrição, excelência técnica e absoluta confidencialidade.
+                                </p>
+                                <div class="pt-4 flex justify-between items-center border-t border-brand-border/60">
+                                    <a href="#contato" class="inline-flex items-center text-[10px] font-bold text-brand-gold uppercase tracking-wider hover:text-white transition-colors group">
+                                        Falar com o Escritório
+                                        <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5 transition-transform group-hover:translate-x-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: Família e Sucessões -->
+                        <div id="panel-2" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-2">
                             <img src="assets/images/atuacao/atuacao-familia.webp" alt="Família e Sucessões" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
                             
@@ -1035,7 +1131,7 @@
                                 </div>
                                 <h3 class="font-serif text-2xl text-white font-bold tracking-wide">Direito de Família e Sucessões</h3>
                                 <p class="text-xs text-brand-muted leading-relaxed font-normal text-left">
-                                    As diretrizes para a resolução de conflitos para relações familiares, sucessórias e patrimoniais são conduzidas por nossos profissionais com um olhar especial ao núcleo familiar. Oferecemos o melhor diagnóstico, levando-se em conta as complexidades de cada causa. Buscamos soluções alternativas de conflitos e atuando também de forma preventiva.
+                                    Nas relações familiares, sucessórias e patrimoniais, a Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia desenvolve uma atuação estratégica e personalizada, pautada na compreensão das particularidades de cada núcleo familiar. Por meio de diagnósticos jurídicos precisos, identifica caminhos seguros para a resolução de conflitos, priorizando soluções consensuais e preventivas que preservem relações, direitos e patrimônios.
                                 </p>
                                 <div class="pt-4 flex justify-between items-center border-t border-brand-border/60">
                                     <a href="#contato" class="inline-flex items-center text-[10px] font-bold text-brand-gold uppercase tracking-wider hover:text-white transition-colors group">
@@ -1046,8 +1142,8 @@
                             </div>
                         </div>
 
-                        <!-- Panel 2: Criança e Adolescente -->
-                        <div id="panel-2" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-2">
+                        <!-- Panel 3: Criança e Adolescente -->
+                        <div id="panel-3" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-3">
                             <img src="assets/images/atuacao/atuacao-crianca.webp" alt="Direito da Criança e do Adolescente" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
                             
@@ -1060,7 +1156,7 @@
                                 </div>
                                 <h3 class="font-serif text-2xl text-white font-bold tracking-wide">Direito da Criança e do Adolescente</h3>
                                 <p class="text-xs text-brand-muted leading-relaxed font-normal text-left">
-                                    Nossa equipe atua na prevenção, combate e enfrentamento da violência infantil, juvenil e intrafamiliar, buscando soluções justas e humanizadas. Temos por princípio a melhoria da qualidade de vida de crianças e adolescentes e atuamos com alto grau de comprometimento e pessoalidade nas demandas submetidas ao nosso patrocínio.
+                                    A Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia desenvolve uma atuação especializada na prevenção, enfrentamento e combate à violência infantil, juvenil e intrafamiliar, com abordagem jurídica sensível, estratégica e humanizada. O escritório dedica atenção individualizada a cada demanda, buscando soluções que preservem direitos, promovam proteção e contribuam para a melhoria da qualidade de vida de crianças e adolescentes. Com elevado grau de comprometimento e pessoalidade, conduz casos de alta complexidade com acolhimento, rigor técnico e responsabilidade.
                                 </p>
                                 <div class="pt-4 flex justify-between items-center border-t border-brand-border/60">
                                     <a href="#contato" class="inline-flex items-center text-[10px] font-bold text-brand-gold uppercase tracking-wider hover:text-white transition-colors group">
@@ -1071,8 +1167,8 @@
                             </div>
                         </div>
 
-                        <!-- Panel 3: Gestão Patrimonial -->
-                        <div id="panel-3" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-3">
+                        <!-- Panel 4: Gestão Patrimonial -->
+                        <div id="panel-4" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-4">
                             <img src="assets/images/atuacao/atuacao-patrimonio.webp" alt="Gestão Patrimonial" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
                             
@@ -1098,8 +1194,8 @@
                             </div>
                         </div>
 
-                        <!-- Panel 4: Consultoria Migratória -->
-                        <div id="panel-4" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-4">
+                        <!-- Panel 5: Consultoria Migratória -->
+                        <div id="panel-5" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-5">
                             <img src="assets/images/atuacao/atuacao-migratorio.webp" alt="Consultoria Migratória e Imigratória" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
                             
@@ -1125,8 +1221,8 @@
                             </div>
                         </div>
 
-                        <!-- Panel 5: Direito Internacional -->
-                        <div id="panel-5" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-5">
+                        <!-- Panel 6: Direito Internacional -->
+                        <div id="panel-6" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-6">
                             <img src="assets/images/atuacao/atuacao-internacional.webp" alt="Direito Internacional de Família" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
                             
@@ -1152,8 +1248,8 @@
                             </div>
                         </div>
 
-                        <!-- Panel 6: Direito Contratual -->
-                        <div id="panel-6" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-6">
+                        <!-- Panel 7: Direito Contratual -->
+                        <div id="panel-7" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-7">
                             <img src="assets/images/atuacao/atuacao-contratos.png" alt="Direito Contratual Estratégico e Estruturação de Negócios" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
                             
@@ -1167,7 +1263,7 @@
                                 <h3 class="font-serif text-2xl text-white font-bold tracking-wide">Direito Contratual Estratégico e Estruturação de Negócios</h3>
                                 
                                 <p class="text-xs text-brand-muted leading-relaxed font-normal text-left">
-                                    Contratos bem estruturados não apenas reduzem riscos — potencializam negócios, protegem patrimônio e garantem segurança nas relações comerciais. Atuamos na elaboração, revisão e negociação de contratos civis e internacionais, contratos de investimento, partnership, vesting e acordo de sócios, instrumentos de proteção patrimonial, contratos imobiliários, comerciais e societários, adequação à LGPD, compliance e governança corporativa, due diligence contratual e negociação estratégica para prevenção de litígios empresariais.
+                                    Contratos estrategicamente estruturados vão além da formalização de negócios: protegem patrimônios, reduzem riscos e fortalecem relações empresariais sustentáveis. A Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia atua na elaboração, revisão e negociação de instrumentos contratuais complexos, nacionais e internacionais, incluindo contratos civis, empresariais e de investimento, acordos de sócios, partnership, vesting, estruturas de proteção patrimonial, operações imobiliárias e societárias. Com atuação preventiva e estratégica, assessora empresas e empreendedores na adequação à LGPD, implementação de práticas de compliance e governança corporativa, realização de due diligence contratual e condução de negociações, buscando segurança jurídica e soluções alinhadas aos objetivos de cada negócio.
                                 </p>
 
                                 <div class="pt-4 flex justify-between items-center border-t border-brand-border/60">
@@ -1179,8 +1275,8 @@
                             </div>
                         </div>
 
-                        <!-- Panel 7: Direito de Franquias -->
-                        <div id="panel-7" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-7">
+                        <!-- Panel 8: Direito de Franquias -->
+                        <div id="panel-8" class="atuacao-panel absolute inset-0 w-full h-full flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 z-0 opacity-0 pointer-events-none" role="tabpanel" aria-labelledby="tab-8">
                             <img src="assets/images/atuacao/atuacao-franquias.png" alt="Direito de Franquias e Estruturação Jurídica para Expansão de Negócios" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out scale-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/30 z-10"></div>
                             
@@ -1234,7 +1330,27 @@
                     </div>
                 </div>
 
-                <!-- Card 1: Família e Sucessões -->
+                <!-- Card 1: Local Counsel Brazil -->
+                <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[420px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
+                    <img src="assets/images/atuacao/atuacao-apoio.webp" alt="Local Counsel Brazil" class="absolute inset-0 w-full h-full object-cover z-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
+                    
+                    <div class="relative z-20 space-y-3">
+                        <div class="flex items-center space-x-2 text-brand-gold">
+                            <i data-lucide="building-2" class="w-4 h-4"></i>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">02 / Local Counsel Brazil</span>
+                        </div>
+                        <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Local Counsel Brazil</h3>
+                        <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed text-left">
+                            A Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia atua como parceira estratégica de empresas, departamentos jurídicos e escritórios de advocacia nacionais e internacionais que necessitam de representação jurídica no Brasil. Com atendimento personalizado, comunicação eficiente e rigoroso compromisso com prazos, oferece suporte em demandas judiciais e extrajudiciais, elaboração de pareceres, due diligence, diligências estratégicas, acompanhamento processual, audiências e demais medidas necessárias à condução segura de interesses perante o ordenamento jurídico brasileiro, integrando-se à estratégia jurídica de seus parceiros com discrição, excelência técnica e absoluta confidencialidade.
+                        </p>
+                        <a href="#contato" class="inline-flex items-center text-[9px] font-bold text-brand-gold uppercase tracking-wider pt-2">
+                            Falar com o Escritório <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Família e Sucessões -->
                 <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[420px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
                     <img src="assets/images/atuacao/atuacao-familia.webp" alt="Família e Sucessões" class="absolute inset-0 w-full h-full object-cover z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
@@ -1242,11 +1358,11 @@
                     <div class="relative z-20 space-y-3">
                         <div class="flex items-center space-x-2 text-brand-gold">
                             <i data-lucide="heart" class="w-4 h-4"></i>
-                            <span class="text-[8px] font-bold tracking-wider uppercase">02 / Família & Sucessões</span>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">03 / Família & Sucessões</span>
                         </div>
                         <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Direito de Família e Sucessões</h3>
                         <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed text-left">
-                            As diretrizes para a resolução de conflitos para relações familiares, sucessórias e patrimoniais são conduzidas por nossos profissionais com um olhar especial ao núcleo familiar. Oferecemos o melhor diagnóstico, levando-se em conta as complexidades de cada causa. Buscamos soluções alternativas de conflitos e atuando também de forma preventiva.
+                            Nas relações familiares, sucessórias e patrimoniais, a Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia desenvolve uma atuação estratégica e personalizada, pautada na compreensão das particularidades de cada núcleo familiar. Por meio de diagnósticos jurídicos precisos, identifica caminhos seguros para a resolução de conflitos, priorizando soluções consensuais e preventivas que preservem relações, direitos e patrimônios.
                         </p>
                         <a href="#contato" class="inline-flex items-center text-[9px] font-bold text-brand-gold uppercase tracking-wider pt-2">
                             Falar com o Escritório <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
@@ -1254,7 +1370,7 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Criança e Adolescente -->
+                <!-- Card 3: Criança e Adolescente -->
                 <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[420px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
                     <img src="assets/images/atuacao/atuacao-crianca.webp" alt="Direito da Criança e do Adolescente" class="absolute inset-0 w-full h-full object-cover z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
@@ -1262,11 +1378,11 @@
                     <div class="relative z-20 space-y-3">
                         <div class="flex items-center space-x-2 text-brand-gold">
                             <i data-lucide="shield" class="w-4 h-4"></i>
-                            <span class="text-[8px] font-bold tracking-wider uppercase">03 / Criança & Adolescente</span>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">04 / Criança & Adolescente</span>
                         </div>
                         <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Direito da Criança e do Adolescente</h3>
                         <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed text-left">
-                            Nossa equipe atua na prevenção, combate e enfrentamento da violência infantil, juvenil e intrafamiliar, buscando soluções justas e humanizadas. Temos por princípio a melhoria da qualidade de vida de crianças e adolescentes e atuamos com alto grau de comprometimento e pessoalidade nas demandas submetidas ao nosso patrocínio.
+                            A Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia desenvolve uma atuação especializada na prevenção, enfrentamento e combate à violência infantil, juvenil e intrafamiliar, com abordagem jurídica sensível, estratégica e humanizada. O escritório dedica atenção individualizada a cada demanda, buscando soluções que preservem direitos, promovam proteção e contribuam para a melhoria da qualidade de vida de crianças e adolescentes. Com elevado grau de comprometimento e pessoalidade, conduz casos de alta complexidade com acolhimento, rigor técnico e responsabilidade.
                         </p>
                         <a href="#contato" class="inline-flex items-center text-[9px] font-bold text-brand-gold uppercase tracking-wider pt-2">
                             Falar com o Escritório <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
@@ -1274,7 +1390,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Gestão Patrimonial -->
+                <!-- Card 4: Gestão Patrimonial -->
                 <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[450px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
                     <img src="assets/images/atuacao/atuacao-patrimonio.webp" alt="Gestão Patrimonial" class="absolute inset-0 w-full h-full object-cover z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
@@ -1282,7 +1398,7 @@
                     <div class="relative z-20 space-y-3">
                         <div class="flex items-center space-x-2 text-brand-gold">
                             <i data-lucide="gem" class="w-4 h-4"></i>
-                            <span class="text-[8px] font-bold tracking-wider uppercase">04 / Legado & Patrimônio</span>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">05 / Legado & Patrimônio</span>
                         </div>
                         <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Gestão Patrimonial e Estruturação Estratégica</h3>
                         
@@ -1296,7 +1412,7 @@
                     </div>
                 </div>
 
-                <!-- Card 4: Consultoria Migratória -->
+                <!-- Card 5: Consultoria Migratória -->
                 <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[450px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
                     <img src="assets/images/atuacao/atuacao-migratorio.webp" alt="Consultoria Migratória" class="absolute inset-0 w-full h-full object-cover z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
@@ -1304,7 +1420,7 @@
                     <div class="relative z-20 space-y-3">
                         <div class="flex items-center space-x-2 text-brand-gold">
                             <i data-lucide="globe" class="w-4 h-4"></i>
-                            <span class="text-[8px] font-bold tracking-wider uppercase">05 / Migração & Imigração</span>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">06 / Migração & Imigração</span>
                         </div>
                         <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Consultoria Migratória e Imigratória Estratégica</h3>
                         
@@ -1318,7 +1434,7 @@
                     </div>
                 </div>
 
-                <!-- Card 5: Direito Internacional -->
+                <!-- Card 6: Direito Internacional -->
                 <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[450px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
                     <img src="assets/images/atuacao/atuacao-internacional.webp" alt="Direito Internacional" class="absolute inset-0 w-full h-full object-cover z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
@@ -1326,7 +1442,7 @@
                     <div class="relative z-20 space-y-3">
                         <div class="flex items-center space-x-2 text-brand-gold">
                             <i data-lucide="languages" class="w-4 h-4"></i>
-                            <span class="text-[8px] font-bold tracking-wider uppercase">06 / Direito Internacional</span>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">07 / Direito Internacional</span>
                         </div>
                         <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Direito Internacional de Família</h3>
                         
@@ -1340,7 +1456,7 @@
                     </div>
                 </div>
 
-                <!-- Card 6: Direito Contratual -->
+                <!-- Card 7: Direito Contratual -->
                 <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[450px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
                     <img src="assets/images/atuacao/atuacao-contratos.png" alt="Direito Contratual" class="absolute inset-0 w-full h-full object-cover z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
@@ -1348,12 +1464,12 @@
                     <div class="relative z-20 space-y-3">
                         <div class="flex items-center space-x-2 text-brand-gold">
                             <i data-lucide="file-text" class="w-4 h-4"></i>
-                            <span class="text-[8px] font-bold tracking-wider uppercase">07 / CONTRATOS / ESTRUTURAÇÃO DE NEGÓCIOS</span>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">08 / CONTRATOS / ESTRUTURAÇÃO DE NEGÓCIOS</span>
                         </div>
                         <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Direito Contratual Estratégico e Estruturação de Negócios</h3>
                         
                         <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed text-left">
-                            Contratos bem estruturados não apenas reduzem riscos — potencializam negócios, protegem patrimônio e garantem segurança nas relações comerciais. Atuamos na elaboração, revisão e negociação de contratos civis e internacionais, contratos de investimento, partnership, vesting e acordo de sócios, instrumentos de proteção patrimonial, contratos imobiliários, comerciais e societários, adequação à LGPD, compliance e governança corporativa, due diligence contratual e negociação estratégica para prevenção de litígios empresariais.
+                            Contratos estrategicamente estruturados vão além da formalização de negócios: protegem patrimônios, reduzem riscos e fortalecem relações empresariais sustentáveis. A Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia atua na elaboração, revisão e negociação de instrumentos contratuais complexos, nacionais e internacionais, incluindo contratos civis, empresariais e de investimento, acordos de sócios, partnership, vesting, estruturas de proteção patrimonial, operações imobiliárias e societárias. Com atuação preventiva e estratégica, assessora empresas e empreendedores na adequação à LGPD, implementação de práticas de compliance e governança corporativa, realização de due diligence contratual e condução de negociações, buscando segurança jurídica e soluções alinhadas aos objetivos de cada negócio.
                         </p>
 
                         <a href="#contato" class="inline-flex items-center text-[9px] font-bold text-brand-gold uppercase tracking-wider pt-2">
@@ -1362,7 +1478,7 @@
                     </div>
                 </div>
 
-                <!-- Card 7: Direito de Franquias -->
+                <!-- Card 8: Direito de Franquias -->
                 <div class="atuacao-mobile-card glass-panel rounded-3xl overflow-hidden relative min-h-[450px] flex flex-col justify-end p-6 sm:p-8 border border-brand-gold/10 hover:border-brand-gold/25 transition-all duration-350 shadow-2xl opacity-0 transform translate-y-10">
                     <img src="assets/images/atuacao/atuacao-franquias.png" alt="Direito de Franquias" class="absolute inset-0 w-full h-full object-cover z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-dark/40 z-10"></div>
@@ -1370,7 +1486,7 @@
                     <div class="relative z-20 space-y-3">
                         <div class="flex items-center space-x-2 text-brand-gold">
                             <i data-lucide="store" class="w-4 h-4"></i>
-                            <span class="text-[8px] font-bold tracking-wider uppercase">08 / FRANQUIAS / EXPANSÃO DE NEGÓCIOS</span>
+                            <span class="text-[8px] font-bold tracking-wider uppercase">09 / FRANQUIAS / EXPANSÃO DE NEGÓCIOS</span>
                         </div>
                         <h3 class="font-serif text-lg sm:text-xl text-white font-bold text-left">Direito de Franquias e Estruturação Jurídica para Expansão de Negócios</h3>
                         
@@ -1383,6 +1499,8 @@
                         </a>
                     </div>
                 </div>
+
+            </div>
 
             </div>
         </section>
@@ -1435,20 +1553,33 @@
                 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 contato-right-grid">
                     
                     <!-- Card 1: Telefone / WhatsApp -->
-                    <a href="https://wa.me/5541992944545?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20virtual%20com%20a%20Teodoro%20%26%20Decesaro." target="_blank" rel="noopener noreferrer" class="contato-info-card glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/10 hover:border-brand-gold/35 flex flex-col justify-between space-y-6 shadow-xl opacity-0 transform translate-y-8 group transition-all duration-300">
+                    <div class="contato-info-card glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/10 hover:border-brand-gold/35 flex flex-col justify-between space-y-6 shadow-xl opacity-0 transform translate-y-8 group transition-all duration-300">
                         <div class="space-y-4">
                             <div class="w-12 h-12 rounded-2xl bg-brand-gold/5 border border-brand-gold/20 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-500">
                                 <i data-lucide="phone" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
                             </div>
-                            <div class="space-y-1.5 text-left">
+                            <div class="space-y-2 text-left">
                                 <span class="text-[9px] font-bold text-brand-muted tracking-widest uppercase block">Telefone & WhatsApp</span>
-                                <h4 class="font-serif text-lg text-white font-medium">(41) 9 9294-4545</h4>
+                                <div class="space-y-1.5">
+                                    <div>
+                                        <span class="text-[9px] font-bold text-brand-gold uppercase tracking-wider block">Brasil (WhatsApp):</span>
+                                        <a href="https://wa.me/5541992944545?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20virtual." target="_blank" rel="noopener noreferrer" class="font-serif text-sm sm:text-base text-white hover:text-brand-gold font-medium transition-colors block">
+                                            +55 41 99294-4545
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <span class="text-[9px] font-bold text-brand-gold uppercase tracking-wider block">Internacional:</span>
+                                        <a href="https://wa.me/16896883486" target="_blank" rel="noopener noreferrer" class="font-serif text-sm sm:text-base text-white hover:text-brand-gold font-medium transition-colors block">
+                                            +1 689 688-3486
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <span class="text-[9px] font-bold text-brand-gold uppercase tracking-wider flex items-center gap-1.5 pt-2">
-                            Enviar Mensagem <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
-                        </span>
-                    </a>
+                        <a href="https://wa.me/5541992944545?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20virtual." target="_blank" rel="noopener noreferrer" class="text-[9px] font-bold text-brand-gold uppercase tracking-wider flex items-center gap-1.5 pt-2 hover:text-white transition-colors">
+                            Iniciar Atendimento <i data-lucide="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
 
                     <!-- Card 2: E-mail -->
                     <a href="mailto:teodorodecesaro@gmail.com" class="contato-info-card glass-panel p-6 sm:p-8 rounded-3xl border border-brand-gold/10 hover:border-brand-gold/35 flex flex-col justify-between space-y-6 shadow-xl opacity-0 transform translate-y-8 group transition-all duration-300">
@@ -1472,15 +1603,20 @@
                             <div class="w-12 h-12 rounded-2xl bg-brand-gold/5 border border-brand-gold/20 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-500">
                                 <i data-lucide="map-pin" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
                             </div>
-                            <div class="space-y-1.5 text-left">
+                            <div class="space-y-2 text-left">
                                 <span class="text-[9px] font-bold text-brand-muted tracking-widest uppercase block">Localização</span>
-                                <h4 class="font-serif text-xs sm:text-sm text-white font-medium leading-relaxed">
-                                    Atendimento remoto exclusivo — Curitiba, PR
-                                </h4>
+                                <div class="space-y-1.5">
+                                    <h4 class="font-serif text-xs sm:text-sm text-white font-medium leading-relaxed">
+                                        Atendimento remoto exclusivo — Paraná, Brasil
+                                    </h4>
+                                    <h4 class="font-serif text-xs sm:text-sm text-brand-goldlight font-medium leading-relaxed">
+                                        Flórida, Estados Unidos da América
+                                    </h4>
+                                </div>
                             </div>
                         </div>
                         <span class="text-[8px] font-bold text-brand-muted uppercase tracking-wider pt-2 block text-left">
-                            Atendimento Remoto Exclusivo
+                            Atendimento Remoto Exclusivo (BR & USA)
                         </span>
                     </div>
 
@@ -1522,7 +1658,7 @@
                 <!-- Coluna 1: Logo & Info (lg:col-span-4) -->
                 <div class="lg:col-span-4 space-y-6 text-left">
                     <a href="#hero" aria-label="Voltar ao topo" class="flex items-center space-x-2.5 group w-fit">
-                        <img src="assets/images/logo-tda.webp" alt="Fernanda Nelsen Teodoro Decesaro – Sociedade Individual de Advocacia" class="h-10 w-auto object-contain brightness-95 group-hover:scale-[1.02] transition-transform duration-300">
+                        <img src="assets/images/logo-tda.webp" alt="Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia OAB/PR 4.481" class="h-14 w-auto object-contain brightness-95 group-hover:scale-[1.02] transition-transform duration-300">
                     </a>
                     <p class="text-xs text-brand-muted leading-relaxed font-normal">
                         Praticando a advocacia personalizada com excelência, ética e orientação estratégica nas esferas judicial e extrajudicial.
@@ -1592,7 +1728,7 @@
 
             <!-- Copyright e OAB -->
             <div class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left text-[10px] text-brand-muted gap-4">
-                <p>&copy; <span id="current-year">2026</span> Fernanda Nelsen Teodoro Decesaro – Sociedade Individual de Advocacia. Todos os direitos reservados.</p>
+                <p>&copy; <span id="current-year">2026</span> Fernanda Nelsen Teodoro Decesaro Sociedade Unipessoal de Advocacia OAB/PR 4.481. Todos os direitos reservados.</p>
                 <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
                 <div class="flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse-slow"></span>

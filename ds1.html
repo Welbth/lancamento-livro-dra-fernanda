@@ -72,6 +72,13 @@
 
     <!-- Global CSS Custom Overrides -->
     <style>
+        /* Custom scrollbar for Firefox and standard scroll behavior */
+        html {
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: #B89161 #141414;
+        }
+
         /* Custom scrollbar for premium theme */
         ::-webkit-scrollbar {
             width: 8px;
@@ -80,7 +87,7 @@
             background: #141414;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1A1A1A;
+            background: #B89161; /* Always gold */
             border: 2px solid #141414;
             border-radius: 4px;
         }
@@ -92,7 +99,6 @@
             background-color: #141414;
             color: #FFFFFF;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
             font-family: 'Lora', serif;
         }
 
@@ -339,7 +345,7 @@
         }
     </style>
 </head>
-<body class="relative min-h-screen selection:bg-brand-gold selection:text-brand-dark overflow-x-hidden antialiased">
+<body class="relative min-h-screen selection:bg-brand-gold selection:text-brand-dark antialiased">
 
     <!-- Subtle Grain Noise Overlay -->
     <div class="noise-overlay"></div>
